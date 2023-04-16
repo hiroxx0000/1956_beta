@@ -1618,7 +1618,6 @@
 		
 		completion_reward = {
 			air_experience = 25
-			add_to_tech_sharing_group = HUN_joint_air_development_group
 			if = {				#Swiss unique DLC tree effects here	- Fantom
 				limit = {
 					original_tag = SWI
@@ -1744,7 +1743,6 @@
 					technology = naval_bomber1
 					technology = naval_bomber2
 				}
-
 			add_opinion_modifier = { target = ENG modifier = GEN_aircraft_england_op }
 			}
 		}
@@ -2410,7 +2408,11 @@
 					producer = ENG
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_england
+					NOT = { has_War_with = GER }
+				}
 				add_equipment_to_stockpile = {
 					type = fighter_equipment
 					amount = 20
@@ -2439,7 +2441,11 @@
 					producer = USA
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_american
+					NOT = { has_War_with = USA }
+				}
 				add_equipment_to_stockpile = {
 					type = fighter_equipment
 					amount = 20
@@ -2456,14 +2462,18 @@
 					has_completed_focus = GEN_aircraft_soviet
 					NOT = { has_War_with = SOV }
 					has_dlc = "By Blood Alone"
-					}
+				}
 				add_equipment_to_stockpile = {
 					type = small_plane_airframe_1
 					amount = 20
 					producer = SOV
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_soviet
+					NOT = { has_War_with = SOV }
+				}
 				add_equipment_to_stockpile = {
 					type = fighter_equipment
 					amount = 20
@@ -2482,7 +2492,11 @@
 					amount = 20
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_german
+					NOT = { has_War_with = GER }
+				}
 				add_equipment_to_stockpile = {	 
 					type = fighter_equipment
 					producer = GER
@@ -2501,7 +2515,11 @@
 					producer = ITA
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_italian
+					NOT = { has_war_with = ITA }
+				}
 				add_equipment_to_stockpile = {	 
 					type = fighter_equipment
 					producer = ITA
@@ -2523,7 +2541,13 @@
 					category = light_fighter
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = GEN_aircraft_england }
+					NOT = { has_completed_focus = GEN_aircraft_soviet }
+					NOT = { has_completed_focus = GEN_aircraft_german }
+					NOT = { has_completed_focus = GEN_aircraft_italian }
+				}
 				add_tech_bonus = {
 					bonus = 1.0
 					uses = 1
@@ -2555,17 +2579,21 @@
 					NOT = { has_War_with = ENG }
 					has_dlc = "By Blood Alone"
 				}	
-			add_equipment_to_stockpile = {
-				type = small_plane_cas_airframe_0
-				amount = 15
-				producer = ENG
+				add_equipment_to_stockpile = {
+					type = small_plane_cas_airframe_0
+					amount = 15
+					producer = ENG
 				}
 			}
-			else = {
-			add_equipment_to_stockpile = {
-				type = CAS_equipment
-				amount = 15
-				producer = ENG
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_england
+					NOT = { has_War_with = ENG }
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment
+					amount = 15
+					producer = ENG
 				}
 			}
 			if = {
@@ -2577,10 +2605,14 @@
 				add_equipment_to_stockpile = {
 					type = medium_plane_airframe_1
 					amount = 15
-					producer = ENG
+					producer = SOV
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					has_completed_focus = GEN_aircraft_soviet
+					NOT = { has_War_with = SOV } 
+				}
 				add_equipment_to_stockpile = {
 					type = tactical_bomber1
 					amount = 15
@@ -2604,7 +2636,11 @@
 					producer = GER
 				}
 			}
-			else = {
+			else_if = {
+				limit =  { 
+					has_completed_focus = GEN_aircraft_german
+					NOT = { has_War_with = GER }
+				}
 				add_equipment_to_stockpile = {
 					type = CAS_equipment
 					amount = 15
@@ -2633,7 +2669,11 @@
 					producer = ITA
 				}
 			}
-			else = {
+			else_if = {
+				limit = { 
+					has_completed_focus = GEN_aircraft_italian
+					NOT = { has_war_with = ITA }
+				}
 				add_equipment_to_stockpile = {
 					type = CAS_equipment
 					amount = 15
@@ -2645,7 +2685,7 @@
 					producer = ITA
 				}
 			}
-			if = { #Por que?
+			if = { 
 				limit = {
 					NOT = { has_completed_focus = GEN_aircraft_england }
 					NOT = { has_completed_focus = GEN_aircraft_soviet }
@@ -2661,7 +2701,13 @@
 					category = medium_air
 				}
 			}
-			else = {
+			else_if = {
+				limit = {
+					NOT = { has_completed_focus = GEN_aircraft_england }
+					NOT = { has_completed_focus = GEN_aircraft_soviet }
+					NOT = { has_completed_focus = GEN_aircraft_german }
+					NOT = { has_completed_focus = GEN_aircraft_italian }
+				}
 				add_tech_bonus = {
 					name = bomber_bonus
 					bonus = 1
@@ -2671,7 +2717,7 @@
 				}
 			}
 		}
-			search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	shared_focus = {
