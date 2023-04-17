@@ -2653,7 +2653,7 @@ focus = {
 
 	focus = {
 		id = SIA_cement_sector_improvement
-		icon = GFX_goal_generic_construction
+		icon = GFX_goal_generic_construction_tools
 		cost = 10
 		prerequisite = {
 			focus = SIA_industrizalize_the_north
@@ -3301,7 +3301,7 @@ focus = {
 				target = ENG
 				modifier = large_increase
 			}
-			ENG = { country_event = { id = SIA_invite_naval_designers.1 days = 5 } }
+			ENG = { country_event = { id = SIA_naval_designers.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
 		}
 		
@@ -3330,7 +3330,7 @@ focus = {
 				target = JAP
 				modifier = large_increase
 			}
-			JAP = { country_event = { id = SIA_invite_naval_designers.1 days = 5 } }
+			JAP = { country_event = { id = SIA_naval_designers.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
 		}
 	}
