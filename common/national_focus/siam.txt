@@ -50,6 +50,7 @@ focus_tree = {
 
 	# SECOND SIAMESE REVOLUTION PART
 	focus = {
+		mark_focus_layout_dirty = yes
 		id = SIA_second_siamese_revolution
 		icon = GFX_goal_siam_kill_phibun
 		cost = 10
@@ -1374,8 +1375,13 @@ focus_tree = {
 		y = 3
 		relative_position_id = SIA_the_monarchist_cause
 		completion_reward = {
-			remove_ideas = SIA_democratic_opposition
-			add_timed_idea = { idea = SIA_waning_democratic_opposition days = 365 }
+			swap_ideas = {
+				remove_ideas = SIA_democratic_opposition
+				add_timed_idea = { 
+					idea = SIA_waning_democratic_opposition
+					days = 365 
+				}
+			}
 		}
 
 	}
@@ -1468,10 +1474,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_supreme_council
 			completion_reward = {
-				remove_ideas = SIA_army_opposition
-				add_timed_idea = {
-					idea = SIA_army_purges
-					days = 120
+				swap_ideas = {
+					remove_ideas = SIA_army_opposition
+					add_timed_idea = {
+						idea = SIA_army_purges
+						days = 120
+					}
 				}
 			}
 
@@ -1793,11 +1801,11 @@ focus_tree = {
 	}
 	focus = {
 		id = SIA_pro_japanese_diplomacy
-		mark_focus_layout_dirty = yes
-		allow_branch = {
-			JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere }
-		}
-		icon = GFX_
+		#mark_focus_layout_dirty = yes
+		#allow_branch = {
+		#	JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere }
+		#}
+		icon = GFX_goal_CHI_support_pro_japanese_faction
 		cost = 2
 		x = -2
 		y = 1
@@ -1812,7 +1820,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIA_support_japanese_empire_plans
-		icon = GFX_
+		icon = GFX_focus_generic_japanese_imperial_glory
 		cost = 2
 		available = { 
 			JAP = exists
@@ -1830,7 +1838,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SIA_draw_up_joint_invasion_plans
-		icon = GFX_
+		icon = GFX_focus_jap_strike_south
 		cost = 2
 		available = { 
 			JAP = exists
@@ -1894,8 +1902,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_phibun_ascension
 		completion_reward = {
-			remove_ideas = SIA_civilian_wing_opposition
-			add_timed_idea = {	idea = SIA_weakened_civilian_wing_opposition	days = 365 }
+			swap_ideas = {
+				remove_ideas = SIA_civilian_wing_opposition
+				add_timed_idea = {	idea = SIA_weakened_civilian_wing_opposition days = 365 }
+			}
 		}
 
 	}
@@ -1951,6 +1961,21 @@ focus_tree = {
 				add_ideas = SIA_dictatorial_control
 			}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SIA_maintain_neutrality
+		icon = GFX
+		cost = 2
+		x = 2
+		y = 1
+		relative_position_id = SIA_dictatorial_control
+		prerequisite = { focus = SIA_replace_the_national_anthem focus = SIA_dictatorial_control }
+		mutually_exclusive = { focus = SIA_pro_japanese_diplomacy }
+		completion_reward = {
+			SIA = {
+				
+			}
+		}
 	}
 
 
@@ -3272,13 +3297,12 @@ focus = {
 			}
 		}
 		completion_reward = {
-			add_ideas = {
-				idea = cammell_laird
-			}
 			add_opinion_modifier = {
 				target = ENG
 				modifier = large_increase
 			}
+			ENG = { country_event = { id = SIA_invite_naval_designers.1 days = 5 } }
+			custom_effect_tooltip = if_they_accept_tt
 		}
 		
 	}
@@ -3302,13 +3326,12 @@ focus = {
 			}
 		}
 		completion_reward = {
-			add_ideas = {
-				idea = yokosuka_naval_arsenal
-			}
 			add_opinion_modifier = {
 				target = JAP
 				modifier = large_increase
 			}
+			JAP = { country_event = { id = SIA_invite_naval_designers.1 days = 5 } }
+			custom_effect_tooltip = if_they_accept_tt
 		}
 	}
 	focus = {
@@ -3827,7 +3850,7 @@ focus = {
 	focus = { #Come back to this.
 		id = SIA_a_faster_army
 		icon = GFX_goal_generic_modernizing_the_cavalry
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_listen_to_new_officers }
 		x = -1
 		y = 1
@@ -3850,7 +3873,7 @@ focus = {
 	focus = {
 		id = SIA_a_canon_on_a_car
 		icon = GFX_goal_mechanized_offensive
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_a_faster_army }
 		x = 0
 		y = 1
@@ -3869,7 +3892,7 @@ focus = {
 	focus = {
 		id = SIA_anti_tank_research
 		icon = GFX_goal_tank_hunt
-		cost = 7
+		cost = 7.2
 		prerequisite = {focus = SIA_listen_to_new_officers }
 		x = 1
 		y = 1
@@ -3887,7 +3910,7 @@ focus = {
 	focus = {
 		id = SIA_artillery_developement
 		icon = GFX_goal_generic_army_artillery
-		cost = 7
+		cost = 77.2
 		prerequisite = {
 			focus = SIA_anti_tank_research
 		}
@@ -3908,7 +3931,7 @@ focus = {
 	focus = {
 		id = SIA_import_foreign_tanks
 		icon = GFX_goal_generic_army_tanks
-		cost = 7
+		cost = 10
 		prerequisite = { focus = SIA_artillery_developement focus = SIA_a_canon_on_a_car }
 		x = -1
 		y = 1
@@ -3924,9 +3947,9 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
-		id = SIA_adopt_blitzkrieg_tactics
+		id = SIA_focus_on_our_own_design
 		icon = GFX_focus_generic_study_foreign_tanks
-		cost = 7
+		cost = 10
 		prerequisite = { focus = SIA_import_foreign_tanks }
 		x = -1
 		y = 2
@@ -3991,7 +4014,7 @@ focus = {
 	focus = {
 		id = SIA_new_rifles
 		icon = GFX_focus_ETH_freedom_at_gunpoint
-		cost = 7
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_remembering_the_great_war
 		}
@@ -4011,7 +4034,7 @@ focus = {
 	focus = {
 		id = SIA_order_new_rifles
 		icon = GFX_goal_generic_gun_purchase
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_new_rifles }
 		x = 0
 		y = 1
@@ -4022,7 +4045,7 @@ focus = {
 				producer = JAP
 				amount = 2500
 			}
-			JAP = { country_event = SIA_arms_purchases.1 }
+			JAP = { country_event = { id = SIA_arms_purchases.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
 			unlock_decision_category_tooltip = SIA_weapons_purchases_category
 		}
@@ -4033,7 +4056,7 @@ focus = {
 	focus = {
 		id = SIA_improve_logistics
 		icon = GFX_goal_plan
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_national_mobilisation }
 		x = -4
 		y = 1
@@ -4046,7 +4069,7 @@ focus = {
 	focus = {
 		id = SIA_focus_on_special_forces
 		icon = GFX
-		cost = 10
+		cost = 7.2
 		prerequisite = { focus = SIA_improve_logistics }
 		x = -4
 		y = 2
@@ -4064,7 +4087,7 @@ focus = {
 	focus = {
 		id = SIA_royal_siamese_special_forces
 		icon = GFX_goal_generic_special_forces
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_focus_on_special_forces }
 		x = 0
 		y = 1
@@ -4078,7 +4101,7 @@ focus = {
 	focus = {
 		id = SIA_improved_r_d
 		icon = GFX_goal_generic_military_research_2
-		cost = 7
+		cost = 10
 		prerequisite = { focus = SIA_royal_siamese_special_forces focus = SIA_adapt_our_vehicles_to_jungle_warfare }
 		x = 0
 		y = 4.5
@@ -4092,7 +4115,7 @@ focus = {
 	focus = {
 		id = SIA_support_our_troops
 		icon = GFX_goal_defensive_position2
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_remembering_the_great_war }
 		x = 1
 		y = 1
@@ -4116,7 +4139,7 @@ focus = {
 	focus = {
 		id = SIA_continue_great_war_tactics
 		icon = GFX_goal_rhineland
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_support_our_troops }
 		x = 0
 		y = 1
@@ -4135,42 +4158,19 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
-		id = SIA_air_is_our_artillery
-		icon = GFX_goal_poland_goal
-		cost = 7
+		id = SIA_proper_artillery
+		icon = GFX_goal_generic_army_artillery
+		cost = 710
 		prerequisite = { focus = SIA_continue_great_war_tactics focus = SIA_order_new_rifles }
 		x = -1
 		y = 2
 		relative_position_id = SIA_support_our_troops
 		completion_reward = {
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				add_tech_bonus = {
-					name = artillery_tech_bonus_name
-					bonus = 1
-					uses = 1
-					category = artillery
-				}
-				create_equipment_variant = {
-					name = "Thai-Ban" #Best CAS - Source:Trust me bro # Added for fun
-					type = small_plane_cas_airframe_1
-					modules = {
-						fixed_main_weapon_slot = bomb_locks
-						fixed_auxiliary_weapon_slot_1 = empty
-						engine_type_slot = engine_2_1x
-						special_type_slot_1 = lmg_defense_turret
-						special_type_slot_2 = dive_brakes_small
-					}
-					icon = "GFX_GER_CAS1_medium"
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = fighter_bonus
-					bonus = 1
-					uses = 1
-					category = light_fighter
-				}
+			add_tech_bonus = {
+				name = artillery_tech_bonus_name
+				bonus = 1
+				uses = 1
+				category = artillery
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4178,11 +4178,11 @@ focus = {
 	focus = {
 		id = SIA_shocktroop_tactics
 		icon = GFX_focus_chi_army_reform
-		cost = 7
-		prerequisite = { focus = SIA_air_is_our_artillery}
+		cost = 7.2
+		prerequisite = { focus = SIA_proper_artillery }
 		x = 0
 		y = 1
-		relative_position_id = SIA_air_is_our_artillery
+		relative_position_id = SIA_proper_artillery
 		completion_reward = {
 			add_tech_bonus = {
 				name = GER_shock_troops_tech_bonus
@@ -4197,7 +4197,7 @@ focus = {
 	focus = {
 		id = SIA_adapt_to_everything
 		icon = GFX_goal_generic_major_war
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_national_mobilisation }
 		x = -2
 		y = 1
@@ -4216,7 +4216,7 @@ focus = {
 	focus = {
 		id = SIA_jungle_training
 		icon = GFX_focus_por_luso_tropicalism
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_adapt_to_everything }
 		x = 1
 		y = 2
@@ -4240,7 +4240,7 @@ focus = {
 	focus = {
 		id = SIA_adapt_our_vehicles_to_jungle_warfare
 		icon = GFX_focus_RAJ_indian_gurkhas
-		cost = 7
+		cost = 7.2
 		prerequisite = { focus = SIA_jungle_training }
 		x = 0
 		y = 1

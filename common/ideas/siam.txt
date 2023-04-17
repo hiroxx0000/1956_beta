@@ -1287,14 +1287,13 @@ ideas = {
 		}
 	}
 	naval_manufacturer = {
-		SIA_bangkok_slipways = {	
+		SIA_bangkok_slipways = {
 			allowed = {
 				original_tag = SIA
 			}
 			available = {
-				has_completed_focus = SIA_naval_development_plan
+				has_completed_focus = SIA_naval_developement_plan
 			}
-			picture = generic_naval_designer
 			research_bonus = {
 				naval_equipment = 0.15
 			}
@@ -1304,6 +1303,46 @@ ideas = {
 
 			ai_will_do = {
 				factor = 1 
+			}
+		}
+		yokosuka_naval_arsenal_license = {
+			name = 	yokosuka_naval_arsenal
+			picture = yokosuka_naval_arsenal
+			allowed = {
+				original_tag = SIA
+			}
+
+			available = {
+				has_completed_focus	= SIA_invite_japanese_naval_designers
+				country_flag = SIA_allowed_naval_designers
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer } #built best CVs
+
+		}
+		cammell_laird_license = {
+			picture = cammell_laird
+			name = cammell_laird
+			allowed = {
+				original_tag = SIA
+			}
+
+			available = {
+				has_completed_focus = SIA_invite_british_naval_designers
+				country_flag = SIA_allowed_naval_designers
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer } #Shit CV's
+			
+			modifier = {
 			}
 		}
 	}
