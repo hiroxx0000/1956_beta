@@ -1366,7 +1366,7 @@ country_event = {
 
 	picture = GFX_SIA_join_faction_japan
 
-	is_trigger_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = SIA_naval_designers.1.a #agree

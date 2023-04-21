@@ -26,7 +26,7 @@
   SIA_treaty_of_vientiane:0 "Treaty Of Vientiane"
   hundred_percent_in_all_thai_nations:0 "§R100% Of Popularity For Pan-Thaiism In Laos and Cambodia§!"
   SIA_tooltip_treaty_of_vientiane:0 "§YYou will annex all three Thai Nations and gain cores on their lands§!"
-
+  SIA_tooltip_available_designer:0 "§GAvailable as Manufacturer:§!"
 
 
 
@@ -670,7 +670,7 @@
  SIA_Aduldej_Charat:0 "Aduldej Charat"
  SIA_Pao_Pienlert_Boripanyutakit:0 "Pao Pienlert Boripanyutakit"
  SIA_Luang_Chuangsakram:0 "Luang Chuangsakram"
-
+  
 
  # Military Staff
 

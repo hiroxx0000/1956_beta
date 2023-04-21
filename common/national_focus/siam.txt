@@ -1349,6 +1349,58 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
+	focus = {
+		id = SIA_
+		icon = GFX_
+		cost = 10
+		prerequisite = { focus = SIA_prepare_siam }
+		x = -5
+		y = 6
+		relative_position_id = SIA_the_monarchist_cause
+		completion_reward = {
+		
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SIA_a
+		icon = GFX_
+		cost = 10
+		prerequisite = { focus = SIA_prepare_siam }
+		x = -7
+		y = 6
+		relative_position_id = SIA_the_monarchist_cause
+		completion_reward = {
+		
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SIA_b
+		icon = GFX_
+		cost = 10
+		prerequisite = { focus = SIA_prepare_siam }
+		x = -3
+		y = 6
+		relative_position_id = SIA_the_monarchist_cause
+		completion_reward = {
+		
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SIA_c
+		icon = GFX_
+		cost = 10
+		prerequisite = { focus = SIA_b }
+		x = -3
+		y = 7
+		relative_position_id = SIA_the_monarchist_cause
+		completion_reward = {
+		
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
 	
 	focus = {
 		id = SIA_supreme_council
@@ -1375,12 +1427,10 @@ focus_tree = {
 		y = 3
 		relative_position_id = SIA_the_monarchist_cause
 		completion_reward = {
-			swap_ideas = {
-				remove_ideas = SIA_democratic_opposition
-				add_timed_idea = { 
-					idea = SIA_waning_democratic_opposition
-					days = 365 
-				}
+			remove_ideas = SIA_democratic_opposition
+			add_timed_idea = { 
+				idea = SIA_waning_democratic_opposition
+				days = 365 
 			}
 		}
 
@@ -1473,16 +1523,13 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SIA_supreme_council
-			completion_reward = {
-				swap_ideas = {
-					remove_ideas = SIA_army_opposition
-					add_timed_idea = {
-						idea = SIA_army_purges
-						days = 120
-					}
-				}
+		completion_reward = {
+			remove_ideas = SIA_army_opposition
+			add_timed_idea = {
+				idea = SIA_army_purges
+				days = 120
 			}
-
+		}
 	}
 
 	focus = {
@@ -1902,9 +1949,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_phibun_ascension
 		completion_reward = {
-			swap_ideas = {
-				remove_ideas = SIA_civilian_wing_opposition
-				add_timed_idea = {	idea = SIA_weakened_civilian_wing_opposition days = 365 }
+			remove_ideas = SIA_civilian_wing_opposition
+			add_timed_idea = {	
+				idea = SIA_weakened_civilian_wing_opposition 
+				days = 365 
 			}
 		}
 
@@ -2292,7 +2340,7 @@ focus = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				is_core_of = ROOT
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2300,7 +2348,7 @@ focus = {
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2750,7 +2798,7 @@ focus = {
 		relative_position_id = SIA_end_the_depression
 		x = 2
 		y = 1
-		cost = 5
+		cost = 7.2
 		available = {
 			has_war_support > 0.20
 		}
@@ -2943,7 +2991,7 @@ focus = {
 	focus = {
 		id = SIA_increase_the_education_budget
 		icon = GFX_goal_generic_education
-		cost = 8
+		cost = 10
 		prerequisite = {
 			focus = SIA_end_the_depression
 		}
@@ -3055,10 +3103,10 @@ focus = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3089,10 +3137,10 @@ focus = {
 							include_locked = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 1
 						add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3293,8 +3341,11 @@ focus = {
 				has_opinion = { target = ROOT value > 49 }
 			}
 			not = {
-				has_War_with = ENG
+				has_war_with = ENG
 			}
+		}
+		bypass = {
+			
 		}
 		completion_reward = {
 			add_opinion_modifier = {
@@ -3303,6 +3354,9 @@ focus = {
 			}
 			ENG = { country_event = { id = SIA_naval_designers.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
+			set_country_flag = SIAUKUNLOCK
+			custom_effect_tooltip = SIA_tooltip_available_designer
+			show_ideas_tooltip = cammell_laird_license
 		}
 		
 	}
@@ -3332,6 +3386,9 @@ focus = {
 			}
 			JAP = { country_event = { id = SIA_naval_designers.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
+			set_country_flag = SIAJAPUNLOCK
+			custom_effect_tooltip = SIA_tooltip_available_designer
+			show_ideas_tooltip = yokosuka_naval_arsenal_license
 		}
 	}
 	focus = {
@@ -3860,7 +3917,7 @@ focus = {
 				limit = {
 			 		has_tech = motorised_infantry
 				}
-				add_timed_idea = { idea = SIA_motorized_push days = 180 }
+				add_timed_idea = { idea = SIA_motorized_push days = 250 }
 			}
 			else = {
 				set_technology = {
@@ -4285,16 +4342,29 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = SIA_the_siamese_air_force
-			completion_reward = {
-					add_tech_bonus = {
-						name = air_bonus
-							bonus = 1
-							uses = 1
-							category = light_fighter
-						}
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
 				}
-				search_filters = { FOCUS_FILTER_RESEARCH }
-
+				add_tech_bonus = {
+					name = fighter_bonus
+					ahead_reduction = 1
+					bonus = 1
+					uses = 1
+					category = light_air
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 1
+					uses = 1
+					category = light_fighter
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
@@ -4306,11 +4376,25 @@ focus = {
 		y = 1
 		relative_position_id = SIA_rule_the_skies
 		completion_reward = {
-			add_tech_bonus = {
-				name = air_bonus
-				bonus = 1
-				uses = 1
-				category = cat_heavy_fighter
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = fighter_bonus
+					ahead_reduction = 1
+					bonus = 1
+					uses = 1
+					category = medium_air
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 1
+					uses = 1
+					category = cat_heavy_fighter
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4326,16 +4410,40 @@ focus = {
 		y = 1
 		relative_position_id = SIA_the_siamese_air_force
 		completion_reward = {
-			add_tech_bonus = {
-				name = air_bonus
-				bonus = 1
-				uses = 1
-				category = tactical_bomber
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = bomber_bonus
+					ahead_reduction = 1
+					bonus = 1
+					uses = 1
+					category = medium_air
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 1
+					uses = 1
+					category = tactical_bomber
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-
+	focus = {
+		id = SIA_improved_cas_efforts
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = { focus = SIA_troops_destruction }
+		x = 1
+		y = 1
+		relative_position_id = SIA_troops_destruction
+		completion_reward = {
+		}
+	}
 	focus = {
 		id = SIA_establish_aviation_school
 		icon = GFX_focus_generic_military_academy
@@ -4365,11 +4473,35 @@ focus = {
 		y = 1
 		relative_position_id = SIA_death_from_the_skies
 		completion_reward = {
-			add_tech_bonus = {
-				name = air_bonus
-				bonus = 1
-				uses = 1
-				category = cas_bomber
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1
+					uses = 1
+					category = medium_air
+				}
+				create_equipment_variant = {
+					name = "Fairey Gordon Export"
+					type = small_plane_cas_airframe_1
+					modules = {
+						fixed_main_weapon_slot = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = light_mg_2x
+						engine_type_slot = engine_2_1x
+						special_type_slot_1 = empty
+					}
+					icon = "GFX_ENG_CAS1_medium"
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 1
+					uses = 1
+					category = cas_bomber
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4471,6 +4603,31 @@ focus = {
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = SIA_improved_anti_air
+		icon = GFX_focus_generic_air_defense
+		cost = 10
+		prerequisite = { focus = SIA_anti_air_protection }
+		x = -2
+		y = 2
+		relative_position_id = SIA_build_new_airports
+		completion_reward = {
+
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = SIA_improved_interception
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = { focus = SIA_anti_air_protection }
+		x = 1
+		y = 1
+		relative_position_id = SIA_anti_air_protection
+		completion_reward = {
+			
+		}
 	}
 	# END OF AIR FORCE TREE
 }
