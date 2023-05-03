@@ -680,7 +680,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIA_winds_of_the_revolution
 		}
-		x = 16
+		x = 23
 		y = 1
 		available = {
 			has_country_flag = SIA_democratic_victory
@@ -698,8 +698,9 @@ focus_tree = {
 		prerequisite = {
 			focus = SIA_the_democratic_cause
 		}
-		x = 16
-		y = 2
+		relative_position_id =  SIA_the_democratic_cause
+		x = 0
+		y = 1
 		completion_reward = {
 			add_ideas = SIA_a_new_era
 
@@ -712,10 +713,11 @@ focus_tree = {
 		icon = GFX_goal_siam_west
 		cost = 10
 		prerequisite = {
-			focus = SIA_a_new_era
+			focus = SIA_propose_a
 		}
-		x = 13
-		y = 3
+		relative_position_id = SIA_propose_a
+		x = 0
+		y = 1
 		completion_reward = {
 			custom_effect_tooltip = SIA_closer_to_the_west_tooltip
 		}
@@ -728,8 +730,9 @@ focus_tree = {
 		icon = GFX_goal_generic_officers
 		cost = 10
 		prerequisite = { focus = SIA_closer_to_the_west }
-		x = 12
-		y = 4
+		x = 2
+		y = 1
+		relative_position_id =  SIA_closer_to_the_west 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -741,12 +744,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
+		id = SIA_proposition_a
+		icon = GFX_goal_generic_officers
+		cost = 10
+		prerequisite = { focus = SIA_the_british_military_mission }
+		x = -1
+		y = 1
+		relative_position_id =  SIA_the_british_military_mission
+		completion_reward = {
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
 		id = SIA_remembering_the_siamese_expeditionary_force  #Siamese Expeditionary Force (WW1 - Assigned to French Units)
 		icon = GFX
 		cost = 5
 		prerequisite = { focus = SIA_the_british_military_mission }
-		x = 11
-		y = 5
+		relative_position_id = SIA_the_british_military_mission
+		x = 1
+		y = 1
 		completion_reward = {
 			add_ideas = SIA_expeditionary_force 
 		}
@@ -757,9 +773,10 @@ focus_tree = {
 		id = SIA_negotiations_with_france
 		icon = GFX_goal_indochina_stronger_hand
 		cost = 10
-		prerequisite = {
-			focus = SIA_closer_to_the_west
-		}
+		prerequisite = { focus = SIA_a_model_democracy }
+		relative_position_id  = SIA_a_model_democracy
+		x = -1
+		y = 1
 		available = {
 			any_country = {
 				OR = {
@@ -788,8 +805,6 @@ focus_tree = {
 				}
 			}
 		}
-		x = 14
-		y = 4
 			completion_reward = {
 					#custom_effect_tooltip = SIA_negotiations_with_france_tooltip
 					if = {
@@ -819,35 +834,28 @@ focus_tree = {
 		id = SIA_a_westernised_nation
 		icon = GFX_goal_generic_double_research
 		cost = 10
-		prerequisite = {
-			focus = SIA_negotiations_with_france
+		prerequisite = { focus = SIA_opening_the_economy }
+		relative_position_id = SIA_opening_the_economy
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = SIA_a_westernised_nation
 		}
-		prerequisite = {
-			focus = SIA_the_british_military_mission
-		}
-		x = 13
-		y = 5
-			completion_reward = {
-					add_ideas = SIA_a_westernised_nation
-				}
-				search_filters = { FOCUS_FILTER_RESEARCH }
-
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 	focus = {
 		id = SIA_opening_the_economy
 		icon = GFX_goal_generic_trade
 		cost = 10
-		prerequisite = {
-			focus = SIA_a_new_era
+		prerequisite = { focus = SIA_closer_to_the_west }
+		relative_position_id = SIA_closer_to_the_west
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = SIA_opening_the_economy
 		}
-		x = 15
-		y = 3
-			completion_reward = {
-					add_ideas = SIA_opening_the_economy
-				}
-				search_filters = { FOCUS_FILTER_INDUSTRY }
-
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
@@ -855,77 +863,13 @@ focus_tree = {
 		icon = GFX_goal_generic_gold_money
 		cost = 10
 		prerequisite = {
-			focus = SIA_negotiations_with_france
-		}
-		prerequisite = {
 			focus = SIA_opening_the_economy
 		}
-		x = 15
-		y = 5
-			completion_reward = {
-					random_owned_controlled_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 0
-											include_locked = yes
-										}
-									OR = {
-											is_in_home_area = yes
-											NOT = {
-													owner = {
-															any_owned_state = {
-																	free_building_slots = {
-																			building = industrial_complex
-																			size > 0
-																			include_locked = yes
-																		}
-																	is_in_home_area = yes
-																}
-														}
-												}
-										}
-								}
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-									type = industrial_complex
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_controlled_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 0
-											include_locked = yes
-										}
-									OR = {
-											is_in_home_area = yes
-											NOT = {
-													owner = {
-															any_owned_state = {
-																	free_building_slots = {
-																			building = industrial_complex
-																			size > 0
-																			include_locked = yes
-																		}
-																	is_in_home_area = yes
-																}
-														}
-												}
-										}
-								}
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-									type = industrial_complex
-									level = 2
-									instant_build = yes
-								}
-						}
-				}
-				search_filters = { FOCUS_FILTER_INDUSTRY }
-
+		relative_position_id = SIA_opening_the_economy
+		x = 1
+		y = 1
+		completion_reward = {
+		}
 	}
 
 	# LIBERAL GOVERNMENT
@@ -934,21 +878,18 @@ focus_tree = {
 		id = SIA_a_liberal_governement
 		icon = GFX_goal_generic_multipartism
 		cost = 5
-		prerequisite = {
-			focus = SIA_a_new_era
-		}
-		available = {
-			has_country_flag = SIA_liberals_win_election
-		}
+		prerequisite = { focus = SIA_a_new_era }
+		available = { has_country_flag = SIA_liberals_win_election }
 		mutually_exclusive = {
 			focus = SIA_conservatism_and_democracy
 		}
-		x = 17
-		y = 3
-			completion_reward = {
-					add_political_power = 70
-				}
-				search_filters = { FOCUS_FILTER_POLITICAL }
+		relative_position_id =  SIA_a_new_era
+		x = -4
+		y = 1
+		completion_reward = {
+			add_political_power = 70
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 	}
 
@@ -958,30 +899,42 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = SIA_a_liberal_governement
+			focus = SIA_conservatism_and_democracy
 		}
-		x = 17
-		y = 4
-			completion_reward = {
-					add_ideas = SIA_state_invervention
-				}
-				search_filters = { FOCUS_FILTER_INDUSTRY }
-
+		relative_position_id = SIA_a_liberal_governement
+		x = 5
+		y = 1
+		completion_reward = {
+			add_ideas = SIA_state_invervention
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = SIA_propose_a
+		icon = GFX_goal_generic_land_seizure
+		cost = 10
+		prerequisite = { focus = SIA_a_liberal_governement }
+		relative_position_id =  SIA_a_liberal_governement
+		x = 0
+		y = 1
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
 		id = SIA_welfare_program
 		icon = GFX_focus_generic_concessions
 		cost = 10
-		prerequisite = {
-			focus = SIA_state_invervention
+		prerequisite = {  focus = SIA_state_invervention }
+		relative_position_id = SIA_state_invervention
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = SIA_welfare_program
 		}
-		x = 17
-		y = 5
-			completion_reward = {
-					add_ideas = SIA_welfare_program
-				}
-				search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
 
 	# END OF LIBERAL GOVERNMENT
@@ -1001,13 +954,13 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SIA_a_liberal_governement
 		}
-		x = 20
-		y = 3
+		relative_position_id =  SIA_the_democratic_cause
+		x = 4
+		y = 2
 			completion_reward = {
-					add_political_power = 70
-				}
-				search_filters = { FOCUS_FILTER_POLITICAL }
-
+				add_political_power = 70
+			}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
@@ -1017,13 +970,59 @@ focus_tree = {
 		prerequisite = {
 			focus = SIA_conservatism_and_democracy
 		}
-		x = 21
-		y = 4
-			completion_reward = {
-					ROOT = {
-							country_event = siam.14
-						}
-				}
+		relative_position_id = SIA_conservatism_and_democracy
+		x = 0
+		y = 1
+		completion_reward = {
+			ROOT = {
+				country_event = siam.14
+			}
+		}
+	}
+	focus = {
+		id = SIA_place_maker
+		icon = GFX_goal_constitutional_monarchy
+		cost = 10
+		prerequisite = {
+			focus = SIA_conservatism_and_democracy
+		}
+		relative_position_id = SIA_conservatism_and_democracy
+		x = 2
+		y = 1
+		completion_reward = {
+
+		}
+
+	}
+	focus = {
+		id = SIA_the_right_choice
+		icon = GFX_goal_constitutional_monarchy
+		cost = 10
+		prerequisite = {
+			focus = SIA_place_maker
+		}
+		relative_position_id = SIA_place_maker
+		x = 0
+		y = 1
+		completion_reward = {
+
+		}
+
+	}
+	focus = {
+		id = SIA_the_model_for_the_masses
+		icon = GFX_goal_constitutional_monarchy
+		cost = 10
+		prerequisite = {
+			focus = SIA_the_right_choice
+			focus = SIA_the_free_the_market
+		}
+		relative_position_id = SIA_the_free_the_market
+		x = 1
+		y = 1
+		completion_reward = {
+
+		}
 
 	}
 
@@ -1034,14 +1033,14 @@ focus_tree = {
 		prerequisite = {
 			focus = SIA_a_constitutional_monarchy
 		}
-		x = 21
-		y = 5
-			completion_reward = {
-					add_ideas = SIA_the_free_the_market
-					add_ideas = free_trade
-				}
-				search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
+		relative_position_id = SIA_a_constitutional_monarchy
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = SIA_the_free_the_market
+			add_ideas = free_trade
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
 
 	# END OF CONSERVATIVE GOVERNMENT
@@ -1056,49 +1055,74 @@ focus_tree = {
 			focus = SIA_conservatism_and_democracy
 			focus = SIA_a_liberal_governement
 		}
-		x = 19
-		y = 4
-			completion_reward = {
-				add_stability = 0.2
-				add_timed_idea = {
-					idea = SIA_disgruntled_army
-					days = 180
-				}
+		relative_position_id = SIA_a_liberal_governement
+		x = 3
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = SIA_disgruntled_army
+				days = 180
 			}
+		}
 		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = SIA_offer_asylum #to minorities
+		icon = GFX_goal_generic_democratic_army
+		cost = 10
+		prerequisite = {
+			focus = SIA_denounce_fascism
+			focus = SIA_welfare_program
+		}
+		relative_position_id =  SIA_denounce_fascism
+		x = 1
+		y = 1
+		completion_reward = {
+		}
 	}
 
 	focus = {
 		id = SIA_denounce_fascism
 		icon = GFX_goal_generic_denazification
 		cost = 10
-		prerequisite = {
-			focus = SIA_monitor_the_army
+		prerequisite = { focus = SIA_monitor_the_army }
+		relative_position_id =  SIA_monitor_the_army
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = SIA_anti_fascism
+			add_war_support = -0.1
+			add_stability = 0.05
 		}
-		x = 19
-		y = 5
-			completion_reward = {
-					add_ideas = SIA_anti_fascism
-					add_war_support = 0.2
-				}
-				search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 	}
 
 	focus = {
 		id = SIA_a_model_democracy
 		icon = GFX_goal_siam_liberty
 		cost = 10
-		prerequisite = {
-			focus = SIA_denounce_fascism
-			focus = SIA_welfare_program
-			focus = SIA_the_free_the_market
-		}
-		x = 19
-		y = 6
+		x = 1
+		y = 1
+		prerequisite = { focus = SIA_offer_asylum }
+		relative_position_id = SIA_offer_asylum
 		completion_reward = {
 			add_ideas = SIA_a_model_democracy
 		}
+	}
+
+	focus = {
+		id = SIA_spread_democratic_values_in_asia
+		icon = GFX_goal_siam_liberty
+		cost = 10
+		prerequisite = { focus = SIA_a_model_democracy }
+		relative_position_id =  SIA_a_model_democracy
+		x = 1
+		y = 1
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 
 	# END OF SHARED DEMOCRATIC FOCUSES
@@ -1122,7 +1146,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		x = 32
+		x = 38
 		y = 0
 		completion_reward = {
 			SIA = {
@@ -1781,7 +1805,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		x = 49
+		x = 53
 		y = 0
 		completion_reward = {
 			add_ideas = SIA_Luang_Wichitwathakan
@@ -3071,7 +3095,7 @@ focus = {
 	focus = {
 		id = SIA_naval_developement_plan
 		icon = GFX_goal_siamese_navy
-		cost = 16
+		cost = 10
 		prerequisite = { focus = SIA_the_royal_siamese_armed_forces }
 		relative_position_id = SIA_the_royal_siamese_armed_forces 
 		x = -11

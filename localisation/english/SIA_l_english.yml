@@ -261,6 +261,8 @@
   SIA_naval_designers.3.d:0 ""
 
   # Ideas
+  SIA_disgruntled_army:0 "Disgruntled Army"
+  SIA_disgruntled_army_desc:0 "With the recent arrests of key figures in the Military, the Army,Naval and Air Chiefs are worried who will be next? - We should allay their fears as only traitors will recieve punishment."
   SIA_fascist_sympathies_in_the_army:0 "Fascist Sympathies In The Army"
   SIA_fascist_sympathies_in_the_army_desc:0 "Through the influence of Plaek Phibunsongkhram, fascist ideals have gained much ground within the army, accentuated by the authoritarian policy already in place. It is very likely that the latter, which already has a large part of the political power, will push Siam to get closer to the powers sharing this ideology"
   SIA_civilian_wing_opposition:0 "Civilian Wing Opposition"
@@ -280,7 +282,7 @@
   SIA_socialist_secret_police:0 "Socialist Secret Police"
   SIA_army_opposition:0 "Army Opposition"
   SIA_capitalist_resistance:0 "Capitalist Resistance"
-  SIA_anti_fascism:0 "Anti Fascism"
+  SIA_anti_fascism:0 "Anti Fascist Movement"
   SIA_rama_vii_constitutional:0 "Rama VII"
   SIA_loyal_army:0 "Loyal Army"
   SIA_purged_army:0 "Purged The Army"
