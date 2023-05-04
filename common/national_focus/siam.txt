@@ -2381,7 +2381,7 @@ focus = {
 		id = SIA_end_the_depression
 		icon = GFX_goal_generic_deals
 		cost = 10
-		x = 65
+		x = 64
 		y = 0
 		ai_will_do = {
 			factor = 10
@@ -2669,10 +2669,10 @@ focus = {
 			289  = {
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 			724= {
 				add_building_construction = {
@@ -2707,8 +2707,8 @@ focus = {
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = naval_base
-					level = 2
+					type = dockyard
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2718,7 +2718,7 @@ focus = {
 					level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 	}
@@ -2737,67 +2737,41 @@ focus = {
 			has_tech = advanced_machine_tools
 		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 2
+                        include_locked = yes
+                    }
+					is_core_of = ROOT					
+				}
+				prioritize = { 868 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 2
+                        include_locked = yes
+                    }
+					is_core_of = ROOT					
+				}
+				prioritize = { 869 }		
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			add_ideas = SIA_cement_sector
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -2950,27 +2924,13 @@ focus = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 1
+                        include_locked = no
+                    }
+					is_core_of = ROOT					
+				}				
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2982,29 +2942,15 @@ focus = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
-						size > 0
+						size > 1
 						include_locked = yes
 					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3077,120 +3023,48 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	# END OF ECONOMIC TREE
-	# START OF ARMED FORCES TREE
-	focus = {
-		id = SIA_the_royal_siamese_armed_forces
-		icon = GFX_goal_siamese_army #Temp ICON
-		cost = 5
-		x = 88
-		y = 0
-		completion_reward = {
-			army_experience = 10
-			navy_experience = 10
-			air_experience = 10
-		}
-	}
 	# NAVY TREE
 
 	focus = {
 		id = SIA_naval_developement_plan
 		icon = GFX_goal_siamese_navy
 		cost = 10
-		prerequisite = { focus = SIA_the_royal_siamese_armed_forces }
-		relative_position_id = SIA_the_royal_siamese_armed_forces 
-		x = -11
-		y = 1
+		relative_position_id = SIA_the_siamese_air_force
+		x = 11
+		y = 0
 		completion_reward = {
-			navy_experience = 25
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+                    free_building_slots = {
+                        building = dockyard
+                        size > 1
+                        include_locked = no
+                    }
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
 					}
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-			}		
+			}
 		}	
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -3254,19 +3128,50 @@ focus = {
 			add_ideas = SIA_quality_over_quantity
 		}
 	}
+	focus = {
+		id = SIA_invite_american_naval_designers
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 5
+		prerequisite = { focus = SIA_quality_over_quantity }
+		prerequisite = { focus = SIA_modernise_our_battleships }
+		x = 0
+		y = 2
+		relative_position_id = SIA_reform_our_tactics
+		available = {
+			USA = {
+				exists = yes
+				has_capitulated = no
+				has_opinion = { target = ROOT value > 49 }
+			}
+			not = {
+				has_War_with = USA
+			}
+		}
+		bypass = {
+			has_war_with = USA
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = large_increase
+				}
+			}
+			USA = { country_event = { id = SIA_naval_designers.1 days = 5 } }
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = SIA_tooltip_available_designer
+		}
+	}
 
 	focus = {
 		id = SIA_destroyers_effort
 		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 10
 		prerequisite = {
-			focus = SIA_quality_over_quantity
-		}
-		prerequisite = {
-			focus = SIA_modernise_our_battleships
+			focus = SIA_invite_american_naval_designers
 		}
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = SIA_reform_our_tactics
 		completion_reward = {
 			add_tech_bonus = {
@@ -3369,16 +3274,18 @@ focus = {
 			}
 		}
 		bypass = {
-			
+			has_war_with = ENG
 		}
 		completion_reward = {
-			add_opinion_modifier = {
-				target = ENG
-				modifier = large_increase
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = large_increase
+				}
 			}
+
 			ENG = { country_event = { id = SIA_naval_designers.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
-			set_country_flag = SIAUKUNLOCK
 			custom_effect_tooltip = SIA_tooltip_available_designer
 			show_ideas_tooltip = cammell_laird_license
 		}
@@ -3403,14 +3310,18 @@ focus = {
 				has_War_with = JAP
 			}
 		}
+		bypass = {
+			has_war_with = JAP
+		}
 		completion_reward = {
-			add_opinion_modifier = {
-				target = JAP
-				modifier = large_increase
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = JAP
+					modifier = large_increase
+				}
 			}
 			JAP = { country_event = { id = SIA_naval_designers.1 days = 5 } }
 			custom_effect_tooltip = if_they_accept_tt
-			set_country_flag = SIAJAPUNLOCK
 			custom_effect_tooltip = SIA_tooltip_available_designer
 			show_ideas_tooltip = yokosuka_naval_arsenal_license
 		}
@@ -3512,12 +3423,46 @@ focus = {
 
 	}
 	focus = {
+		id = SIA_invite_german_naval_designers
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 5
+		prerequisite = { focus = SIA_study_submarines}
+		prerequisite = { focus = SIA_naval_mass_production }
+		x = 0
+		y = 2
+		relative_position_id = SIA_adopt_new_tactics
+		available = {
+			GER = {
+				exists = yes
+				has_capitulated = no
+				has_opinion = { target = ROOT value > 49 }
+			}
+			not = {
+				has_War_with = GER
+			}
+		}
+		bypass = {
+			has_war_with = GER
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = large_increase
+				}
+			}
+			GER = { country_event = { id = SIA_naval_designers.1 days = 5 } }
+			custom_effect_tooltip = if_they_accept_tt
+			custom_effect_tooltip = SIA_tooltip_available_designer
+			
+		}
+	}
+	focus = {
 		id = SIA_submarines_modernization
 		icon = GFX_goal_generic_navy_anti_submarine
-		prerequisite = { focus = SIA_study_submarines }
-		prerequisite = { focus = SIA_naval_mass_production }
-		x = 1.5
-		y = 1
+		prerequisite = { focus = SIA_invite_german_naval_designers }
+		x = 1
+		y = 2
 		relative_position_id = SIA_study_submarines
 		cost = 10
 		completion_reward = {
@@ -3576,100 +3521,40 @@ focus = {
 		cost = 7.2
 		prerequisite = { focus = SIA_modular_construction focus = SIA_develop_cruisers focus = SIA_develop_naval_aircraft }
 		x = 0
-		y = 5
+		y = 6
 		relative_position_id = SIA_naval_developement_plan
 
 		completion_reward = {
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-							free_building_slots = {
-								building = dockyard
-									size > 1
-									include_locked = yes
-								}
-					}
-					add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+                    free_building_slots = {
+                        building = dockyard
+                        size > 1
+                        include_locked = no
+                    }
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
 					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-								free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-				}	
-				random_state = {
-					limit = {
-						controller = {
-							tag = ROOT
-						}
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -3687,17 +3572,16 @@ focus = {
 		y = 1
 		relative_position_id = SIA_increase_the_naval_production
 		completion_reward = {
-				add_ideas = SIA_naval_fortifications
-			
+			add_timed_idea = { idea = SIA_naval_fortifications  days = 180 }
 			289 = {
 				add_building_construction = {
-					type = bunker
+					type = coastal_bunker
 					level = 2
 					province = 7225
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = bunker
+					type = coastal_bunker
 					level = 2
 					province = 1427
 					instant_build = yes
@@ -3717,19 +3601,19 @@ focus = {
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = bunker
+					type = coastal_bunker
 					level = 1
 					province = 4371
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = bunker
+					type = coastal_bunker
 					level = 1
 					province = 12131
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = bunker
+					type = coastal_bunker
 					level = 1
 					province = 10156
 					instant_build = yes
@@ -3750,97 +3634,36 @@ focus = {
 		y = 1
 		relative_position_id = SIA_increase_the_naval_production
 		completion_reward = {
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+                    free_building_slots = {
+                        building = dockyard
+                        size > 1
+                        include_locked = no
+                    }
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
 			}
-			if = {
+			random_owned_controlled_state = {
 				limit = {
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 1
-								include_locked = yes
-							}
-						}
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
 					}
-				}
-				random_state = {
-					limit = {
-						controller = {
-							tag = ROOT
-						}
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-							}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = dockyard
-						level = 2
-						instant_build = yes
-					}
+					is_core_of = ROOT					
+				}				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -3861,17 +3684,29 @@ focus = {
 		y = 2
 		relative_position_id = SIA_increase_the_naval_production
 		completion_reward = {
-			navy_experience = 50
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
 			if = {
 				limit = { has_dlc = "No Step Back" }
-				add_ideas = { idea = naval_academy_scholarships_spirit }
+				hidden_effect = {
+					add_ideas = { idea = naval_academy_scholarships_spirit }
+				}
+				custom_effect_tooltip = SIA_gain_tooltip
+				show_ideas_tooltip = naval_academy_scholarships_spirit
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = naval_doctrine
+				}
 			}
+			else = {
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.75
+					uses = 3
+					category = naval_doctrine
+				}
+			}
+			navy_experience = 30
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3886,10 +3721,10 @@ focus = {
 		id = SIA_army_reform_plan
 		icon = GFX_goal_siamese_army
 		cost = 10
-		x = 0
-		y = 1
+		x = 14
+		y = 0
 		prerequisite ={ focus = SIA_the_royal_siamese_armed_forces }
-		relative_position_id = SIA_the_royal_siamese_armed_forces
+		relative_position_id = SIA_end_the_depression
 		ai_will_do = {
 			factor = 5
 		}
@@ -4342,10 +4177,9 @@ focus = {
 		id = SIA_the_siamese_air_force #fucktheairforce
 		icon = GFX_goal_siamese_air_force
 		cost = 10
-		x = 11
-		y = 1
-		prerequisite = { focus = SIA_the_royal_siamese_armed_forces }
-		relative_position_id = SIA_the_royal_siamese_armed_forces
+		x = 25
+		y = 0
+		relative_position_id = SIA_end_the_depression
 			completion_reward = {
 				air_experience = 25
 				add_doctrine_cost_reduction = {
@@ -4363,7 +4197,7 @@ focus = {
 		cost = 10
 		prerequisite = { focus = SIA_the_siamese_air_force }
 		mutually_exclusive = { focus = SIA_death_from_the_skies }
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = SIA_the_siamese_air_force
 		completion_reward = {
@@ -4405,11 +4239,15 @@ focus = {
 					has_dlc = "By Blood Alone"
 				}
 				add_tech_bonus = {
-					name = fighter_bonus
 					ahead_reduction = 1
 					bonus = 1
 					uses = 1
 					category = medium_air
+				}
+				add_tech_bonus = {
+					technology = range_improvements
+					bonus = 1
+					uses = 1
 				}
 			}
 			else = {
@@ -4423,6 +4261,60 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
+	focus = {
+		id = SIA_faster_aircraft_development
+		icon = GFX_goal_generic_air_heavy_fighter2_new
+		cost = 10
+		prerequisite = { focus = SIA_rule_the_skies }
+		x = 1
+		y = 1
+		relative_position_id = SIA_rule_the_skies
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = light_air
+				}
+				add_tech_bonus = {
+					technology = engines_2
+					technology = engines_3
+					technology = engines_4
+					bonus = 1
+					uses = 1
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					ahead_reduction = 1
+					bonus = 1
+					uses = 1
+					category = light_fighter
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = SIA_air_dominance
+		icon = GFX_goal_generic_air_heavy_fighter2_new
+		cost = 10
+		prerequisite = { 
+			focus = SIA_long_range_fighters
+			focus = SIA_faster_aircraft_development
+		}
+		x = 0
+		y = 2
+		relative_position_id = SIA_rule_the_skies
+		completion_reward = {
+			
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
 
 	focus = {
 		id = SIA_death_from_the_skies
@@ -4430,7 +4322,7 @@ focus = {
 		cost = 10
 		prerequisite = { focus = SIA_the_siamese_air_force }
 		mutually_exclusive = { focus = SIA_rule_the_skies }
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = SIA_the_siamese_air_force
 		completion_reward = {
@@ -4462,6 +4354,17 @@ focus = {
 		icon = GFX_goal_generic_air_bomber
 		cost = 10
 		prerequisite = { focus = SIA_troops_destruction }
+		x = -1
+		y = 1
+		relative_position_id = SIA_troops_destruction
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = SIA_naval_bomber
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = { focus = SIA_troops_destruction }
 		x = 1
 		y = 1
 		relative_position_id = SIA_troops_destruction
@@ -4473,7 +4376,7 @@ focus = {
 		icon = GFX_focus_generic_military_academy
 		cost = 10
 		prerequisite = { focus = SIA_build_new_airports }
-		x = -1
+		x = -2
 		y = 2
 		relative_position_id = SIA_death_from_the_skies
 		completion_reward = {
@@ -4525,6 +4428,36 @@ focus = {
 					bonus = 1
 					uses = 1
 					category = cas_bomber
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = SIA_city_destruction
+		icon = GFX_goal_generic_air_CAS_new
+		cost = 10
+		prerequisite = { focus = SIA_death_from_the_skies }
+		x = -1
+		y = 1
+		relative_position_id = SIA_death_from_the_skies
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					bonus = 1
+					uses = 1
+					category = heavy_air
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = air_bonus
+					bonus = 1
+					uses = 1
+					category = cat_strategic_bomber
 				}
 			}
 		}

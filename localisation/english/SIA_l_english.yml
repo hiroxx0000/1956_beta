@@ -298,7 +298,7 @@
   SIA_royal_special_forces:0 "Siamese Royal Special Forces"
   SIA_cement_sector:0 "Siamese Cement Industry"
   SIA_state_funded_schooling:0 "State Funded Schooling"
-  
+  SIA_motorized_push:0 "Motorizing the Army"
 
 
   # Focus
@@ -650,6 +650,7 @@
  SIA_choosing_a_side_tooltip:0 "§YUnlocks§!£decision_icon_small decisions to ally Germany, Italy or Japan"
  SIA_disturb_indochina_tooltip:0 "§YUnlocks§! £decision_icon_small decisions to fuel communist resistance in Indochina"
  SIA_stay_on_guard_tooltip:0 "§YUnlocks§! £decision_icon_small decisions to join factions if you are menaced"
+ SIA_gain_tooltip:0 "§CNaval College gains the spirit:§!"
  SIA_follow_the_soviet_model_tooltip:0 "§YPridi Banomyong§! gains:\n  §YStaunch Stalinist§!\n  -Factory Output: §G+10.00%§!\n  -Ideology drift defense: §G+15.00%§!"
  SIA_peasant_communism_tooltip:0 "§YPridi Banomyong§! gains:\n  §YAgrarian Marxist§!\n  -Division Attrition: §G-10.00%§!\n  -Out of Supply: §G-50.00%§!"
  SIA_cultural_revolution_tooltip:0 "The country will be renamed to §YThailand§!"
