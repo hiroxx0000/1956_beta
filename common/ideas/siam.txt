@@ -1099,22 +1099,9 @@ ideas = {
 				}
 			}
 		}
-		SIA_modular_naval_construction = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = generic_navy_bonus
-			equipment_bonus = {
-				submarine = {
-					build_cost_ic = -0.1
-					instant = yes
-				}
-			}
-		}
+		# NAVAL IDEAS
+
+		# ARMY IDEAS
 		SIA_army_purges = {
 
 			allowed = {
@@ -1196,7 +1183,7 @@ ideas = {
 			}
 		}
 
-
+		# ANTI-FASCIST IDEAS
 		SIA_free_thai_movement = {
 			removal_cost = -1
 			picture = generic_army_war_college
@@ -1205,7 +1192,7 @@ ideas = {
 				political_power_factor = -0.10
 			}
 		}
-
+		# INDUSTRIAL IDEAS
 		SIA_state_funded_schooling =  {
 			allowed = {
 				always = no
@@ -1242,8 +1229,8 @@ ideas = {
 				recruitable_population_factor = -0.003
 			}
 		}
-
-		SIA_adopt_swiss_neutrality_stance = {
+		# NEUTRALITY IDEAS
+		SIA_adopt_neutrality_stance = {
 			available = {
 				has_war = no
 				is_in_faction = no
@@ -1263,6 +1250,9 @@ ideas = {
 			}
 		}
 	}
+
+
+	# DESIGNERS/MANUFACTURERS
 	industrial_concern = { #SRT (Founded in 1890)
 		SIA_state_railway = {
 			
@@ -1286,7 +1276,7 @@ ideas = {
 			}
 		}
 	}
-	naval_manufacturer = {
+	naval_manufacturer = {	# Siam planned to refit ships purchased from Major Powers into Coastal Defence Ships
 		SIA_bangkok_slipways = {
 			allowed = {
 				original_tag = SIA
@@ -1303,46 +1293,6 @@ ideas = {
 
 			ai_will_do = {
 				factor = 1 
-			}
-		}
-		yokosuka_naval_arsenal_license = {
-			name = 	yokosuka_naval_arsenal
-			picture = yokosuka_naval_arsenal
-			allowed = {
-				original_tag = SIA
-			}
-
-			available = {
-				has_completed_focus	= SIA_invite_japanese_naval_designers
-				country_flag = SIA_allowed_naval_designers
-			}
-
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { pacific_fleet_naval_manufacturer } #built best CVs
-
-		}
-		cammell_laird_license = {
-			picture = cammell_laird
-			name = cammell_laird
-			allowed = {
-				original_tag = SIA
-			}
-
-			available = {
-				has_completed_focus = SIA_invite_british_naval_designers
-				country_flag = SIA_allowed_naval_designers
-			}
-
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-			
-			traits = { atlantic_fleet_naval_manufacturer } #Shit CV's
-			
-			modifier = {
 			}
 		}
 	}
