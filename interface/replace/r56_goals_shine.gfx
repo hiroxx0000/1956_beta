@@ -50922,7 +50922,7 @@ SpriteTypes = {
 	}
 	
 		SpriteType = {
-		name = "GFX_goal_siam_armed_forces"
+		name = "GFX_goal_siam_armed_forces_shine"
 		texturefile = "gfx/interface/goals/sia/r56_goal_SIA_siamese_armed_forces.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

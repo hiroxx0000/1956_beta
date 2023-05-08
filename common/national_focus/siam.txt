@@ -2163,7 +2163,7 @@ focus = {
 		id = SIA_end_the_depression
 		icon = GFX_goal_generic_deals
 		cost = 5
-		x = 61
+		x = 59
 		y = 0
 		ai_will_do = {
 			factor = 10
@@ -2178,90 +2178,76 @@ focus = {
 		icon = GFX_goal_generic_production2
 		cost = 7
 		prerequisite = {
-			focus = SIA_end_the_depression
+			focus = SIA_improve_our_roads
 		}
-		x = -4
+		x = 0
 		y = 1
-		relative_position_id = SIA_end_the_depression
+		relative_position_id = SIA_improve_our_roads
 		completion_reward = {
 			random_owned_controlled_state = {
+				is_core_of = ROOT
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
+                    free_building_slots = {
+                        building = industrial_complex
+                        size > 1
+                        include_locked = no
+                    }				
+				}				
 				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			random_owned_controlled_state = {
+				is_core_of = ROOT
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
-						size > 0
+						size > 1
 						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
+					}					
+				}				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-							NOT = {
-								owner = {
-									any_owned_state = {
-										free_building_slots = {
-											building = industrial_complex
-											size > 0
-											include_locked = yes
-										}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+
+	focus = {
+		id = SIA_develop_steel_industry
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SIA_mechanization_of_agriculture }
+		relative_position_id = SIA_mechanization_of_agriculture
+		x = 1
+		y = 1
+		cost = 10
+		has_capitulated = no 
+		completion_reward = {
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER}
+	}
+
+	focus = {
+		id = SIA_develop_aluminium_industry
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SIA_develop_steel_industry }
+		relative_position_id = SIA_mechanization_of_agriculture
+		x = 1
+		y = 2
+		cost = 10
+		has_capitulated = no 
+		completion_reward = {
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER}
+	}
+
 
 	focus = {
 		id = SIA_develop_rubber_extraction
@@ -2285,14 +2271,29 @@ focus = {
 	}
 
 	focus = {
+		id = SIA_synthetic_oil_rubber
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SIA_develop_rubber_extraction }
+		relative_position_id = SIA_mechanization_of_agriculture
+		x = -1
+		y = 2
+		cost = 10
+		has_capitulated = no 
+		completion_reward = {
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RUBBER}
+	}
+
+	focus = {
 		id = SIA_dig_for_tungsten
 		icon = GFX_focus_generic_tungsten
 		cost = 10
 		prerequisite = {
-			focus = SIA_develop_rubber_extraction
+			focus = SIA_synthetic_oil_rubber
+			focus = SIA_develop_aluminium_industry
 		}
-		x = 0
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = SIA_develop_rubber_extraction
 
 		available = {
@@ -2321,11 +2322,9 @@ focus = {
 		id = SIA_dig_for_tin
 		icon = GFX_goal_generic_mining_iron
 		cost = 10
-		prerequisite = {
-			focus = SIA_dig_for_tungsten
-		}
-		x = 0
-		y = 2
+		prerequisite = { focus = SIA_dig_for_tungsten }
+		x = 1
+		y = 3
 		relative_position_id = SIA_develop_rubber_extraction
 
 		available = {
@@ -2354,7 +2353,7 @@ focus = {
 		prerequisite = {
 			focus = SIA_end_the_depression
 		}
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = SIA_end_the_depression
 			completion_reward = {
@@ -2381,14 +2380,11 @@ focus = {
 		icon = GFX_goal_generic_industrial_planning
 		cost = 5
 		prerequisite = {
-			focus = SIA_improve_our_roads
-		}
-		prerequisite = {
-			focus = SIA_mechanization_of_agriculture
+			focus = SIA_end_the_depression
 		}
 		x = -1
 		y = 1
-		relative_position_id = SIA_improve_our_roads
+		relative_position_id = SIA_end_the_depression
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 2
@@ -2556,25 +2552,23 @@ focus = {
 	focus = {
 		id = SIA_urbanisation_effort
 		icon = GFX_goal_generic_housing
-		prerequisite = { focus = SIA_state_sponsored_civilian_construction }
-		relative_position_id = SIA_state_sponsored_civilian_construction
-		x = 0
+		prerequisite = { focus = SIA_electronic_research focus = SIA_cement_sector_improvement focus = SIA_connect_the_south }
+		relative_position_id = SIA_electronic_research
+		x = 3
 		y = 1
 		cost = 5
 		completion_reward = {
-				add_ideas = SIA_urbanisation_effort
-			}
+			add_ideas = SIA_urbanisation_effort
+		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
-
-	
 
 	focus = {
 		id = SIA_state_sponsored_civilian_construction
 		icon = GFX_focus_generic_industry_3
 		prerequisite = { focus = SIA_electronic_research focus = SIA_cement_sector_improvement focus = SIA_connect_the_south }
 		relative_position_id = SIA_electronic_research
-		x = 2
+		x = 1
 		y = 1
 		cost = 10
 		completion_reward = {
@@ -2615,13 +2609,26 @@ focus = {
 	}
 
 	focus = {
+		id = SIA_city_flood_preperation
+		icon = GFX_goal_generic_housing
+		prerequisite = { focus = SIA_state_sponsored_civilian_construction }
+		prerequisite = { focus = SIA_urbanisation_effort }
+		relative_position_id = SIA_electronic_research
+		x = 2
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
 		id = SIA_increase_the_education_budget
 		icon = GFX_goal_generic_education
 		cost = 10
 		prerequisite = {
 			focus = SIA_end_the_depression
 		}
-		x = 3
+		x = 7
 		y = 1
 		relative_position_id = SIA_end_the_depression
 		completion_reward = {
@@ -2641,7 +2648,7 @@ focus = {
 		prerequisite = { focus = SIA_increase_the_education_budget }
 
 		x = 0
-		y = 1.5
+		y = 1
 		relative_position_id = SIA_increase_the_education_budget
 		available = {
 			num_of_factories > 25
@@ -2656,6 +2663,26 @@ focus = {
 				}
 				
 			}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = SIA_open_nuclear_research_facility
+		icon = GFX_goal_generic_education
+		cost = 10
+		prerequisite = {
+			focus = SIA_open_new_universities
+		}
+		x = 0
+		y = 2
+		relative_position_id = SIA_increase_the_education_budget
+		completion_reward = {
+			add_ideas = SIA_increased_education_budget
+			swap_ideas = { 
+				remove_idea = SIA_illiteracy
+				add_idea = SIA_battling_illiteracy
+			}
+		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
@@ -2686,7 +2713,7 @@ focus = {
 		icon = GFX_goal_siam_armed_forces
 		cost = 10
 		relative_position_id = SIA_end_the_depression
-		x = 23
+		x = 27
 		y = 0
 		completion_reward = {
 
