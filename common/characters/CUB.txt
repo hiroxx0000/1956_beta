@@ -185,7 +185,23 @@ characters={
 			}
 			traits = { fascist_demagogue }
 			ai_will_do = {
-				factor = 1.000
+				factor = 0
+				modifier = {
+					has_completed_focus = CUB_seek_falangist_support
+					NOT = {
+						OR = {
+							AND = {
+								is_puppet = yes
+								NOT = {
+									has_government = fascism
+								}
+							}
+							fascism > 0.7
+							fascism < 0.15
+						}						
+					}
+					add = 50
+				}				
 			}
 		}
 
@@ -327,6 +343,27 @@ characters={
 			available = {
 				has_completed_focus = CUB_oppose_the_presidency
 			}
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_completed_focus = CUB_oppose_the_presidency
+					NOT = {
+						OR = {
+							AND = {
+								is_puppet = yes
+								NOT = {
+									has_government = communism
+								}
+							}
+							communism > 0.7
+							communism < 0.15
+						}						
+					}
+					add = 50
+				}					
+			}
+
+
 		}
 	}
 

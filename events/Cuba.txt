@@ -283,9 +283,20 @@ country_event = { #Annexation Demands for Haiti & the Dominican Republic
 			create_wargoal = {
 				target = ROOT
 				expire = 0 
-				type = take_state_focus
-				generator = { 319 }
+				type = annex_everything
 			}
+		}
+		if = {
+			limit = {
+				controls_state = 318
+			}
+			add_state_claim = 318
+		}
+		if = {
+			limit = {
+				controls_state = 319
+			}
+			add_state_claim = 319
 		}
 	}
 }
