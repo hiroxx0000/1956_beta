@@ -455,6 +455,9 @@ characters={
 				}
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				
 				available = {
@@ -470,7 +473,7 @@ characters={
 					SWI_on_remove_councilor = yes
 				}
 	
-				removal_cost = -1
+				can_be_fired = no
 	
 				ai_will_do = {
 					base = 4000
@@ -558,11 +561,11 @@ characters={
 			}
 		}
 	}
-	SWI_hans_oprecht={	#r56 and vanilla character - merged
-
-		#NO BBA
-		instance = {
-			allowed = {NOT = { has_dlc = "By Blood Alone" } }
+	SWI_hans_oprecht_r56={
+		instance = { #No BBA 
+			allowed = {
+				NOT = { has_dlc = "By Blood Alone" }	
+			}	
 			name=SWI_hans_oprecht
 			portraits={
 				army={
@@ -575,20 +578,22 @@ characters={
 				allowed  = {
 					original_tag  = SWI
 				}
+				visible = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 				traits  = {
 					democratic_reformer
 				}
 			}
 		}
-		instance = {
+		instance = { #BBA - same but DLC image
 			allowed = {
 				has_dlc = "By Blood Alone"
 			}
 			name=SWI_hans_oprecht
 			portraits={
-				civilian={
+				army={
 					small="GFX_portrait_SWI_hans_oprecht_small"
-					large="GFX_portrait_SWI_hans_oprecht"
 				}
 			}
 			advisor={
@@ -598,33 +603,58 @@ characters={
 					original_tag  = SWI
 				}
 				visible = {
-					SWI_councilor_visible = yes
-				}
-				available = {
-					SWI_can_be_councilor = yes
+					has_global_flag = SWI_R56_focus_tree
 				}
 				traits  = {
-					SWI_trade_unionist 
+					democratic_reformer
 				}
-				on_add = {
-					SWI_on_add_councilors = yes
+			}
+		}
+	}
+	SWI_hans_oprecht={
+		name=SWI_hans_oprecht
+		portraits={
+			civilian={
+				small="GFX_portrait_SWI_hans_oprecht_small"
+				large="GFX_portrait_SWI_hans_oprecht"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SWI_hans_oprecht
+			allowed  = {
+				original_tag  = SWI
+			}
+			visible = {
+				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
 				}
-				on_remove = {
-					SWI_on_remove_councilor = yes
+			}
+			available = {
+				SWI_can_be_councilor = yes
+			}
+			traits  = {
+				SWI_trade_unionist 
+			}
+			on_add = {
+				SWI_on_add_councilors = yes
+			}
+			on_remove = {
+				SWI_on_remove_councilor = yes
+			}
+			
+			can_be_fired = no
+
+			ai_will_do = {
+				base = 2000
+				modifier = {
+					factor = 5 
+					SWI_AI_is_imperial = yes 
 				}
-				
-				removal_cost = -1
-	
-				ai_will_do = {
-					base = 2000
-					modifier = {
-						factor = 5 
-						SWI_AI_is_imperial = yes 
-					}
-					modifier = {
-						factor = 7
-						SWI_AI_is_dem_exp = yes 
-					}
+				modifier = {
+					factor = 7
+					SWI_AI_is_dem_exp = yes 
 				}
 			}
 		}
@@ -775,6 +805,9 @@ characters={
 				}
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				available = {
 					SWI_can_be_councilor = yes
@@ -790,7 +823,7 @@ characters={
 				}
 
 	
-				removal_cost = -1
+				can_be_fired = no
 
 				ai_will_do = {
 					base = 4000
@@ -856,7 +889,7 @@ characters={
 				has_dlc = "By Blood Alone"
 			}
 			available = {
-				ROOT = { has_completed_focus = SWI_promote_guisan }
+				has_completed_focus = SWI_promote_guisan
 			}
 			traits = {
 				SWI_commander_in_chief
@@ -928,6 +961,9 @@ characters={
 				}
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				available = {
 					SWI_can_be_councilor = yes
@@ -943,7 +979,7 @@ characters={
 					SWI_on_remove_councilor = yes
 				}
 	
-				removal_cost = -1
+				can_be_fired = no
 				ai_will_do = {
 					base = 4000
 					modifier = {
@@ -981,6 +1017,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -995,7 +1034,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 4000 
@@ -1051,6 +1090,9 @@ characters={
 				}
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				available = {
 					SWI_can_be_councilor = yes
@@ -1065,7 +1107,7 @@ characters={
 					SWI_on_remove_councilor = yes
 				}
 
-				removal_cost = -1
+				can_be_fired = no
 
 				ai_will_do = {
 					base = 4000
@@ -1088,6 +1130,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1102,7 +1147,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 			
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000 
@@ -1130,6 +1175,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1144,7 +1192,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000
@@ -1172,6 +1220,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1186,7 +1237,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -1210,6 +1261,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1225,7 +1279,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -1261,6 +1315,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1275,7 +1332,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000 
@@ -1304,6 +1361,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1318,7 +1378,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1343,6 +1403,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1357,7 +1420,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 
 			ai_will_do = {
@@ -1387,6 +1450,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1401,7 +1467,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -1429,6 +1495,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1443,7 +1512,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 4000
@@ -1472,6 +1541,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1486,7 +1558,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1523,6 +1595,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 				has_completed_focus = SWI_gotthard_union
 			}
 			available = {
@@ -1538,7 +1613,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1566,6 +1641,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1580,7 +1658,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000
@@ -1604,6 +1682,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1618,7 +1699,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000
@@ -1650,6 +1731,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1664,7 +1748,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1689,6 +1773,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1704,7 +1791,7 @@ characters={
 			}
 
 
-			removal_cost = -1
+			can_be_fired = no
 			ai_will_do = {
 				base = 4000
 				modifier = {
@@ -1732,6 +1819,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1754,7 +1844,7 @@ characters={
 				}
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 		}
 		name=SWI_enrico_celio
@@ -1775,6 +1865,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 				has_completed_focus = SWI_gotthard_union
 			}
 			available = {
@@ -1790,7 +1883,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1826,6 +1919,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1852,7 +1948,7 @@ characters={
 				}
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 		}
 		name=SWI_ernst_nobs
@@ -1873,6 +1969,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1887,7 +1986,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1916,6 +2015,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -1930,7 +2032,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -1962,6 +2064,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 				has_completed_focus = SWI_gotthard_union
 			}
 			available = {
@@ -1977,7 +2082,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -2004,6 +2109,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -2019,7 +2127,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 			
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -2061,11 +2169,14 @@ characters={
 			}
 			available = {
 				SWI_can_be_councilor = yes
-				has_completed_focus = SWI_the_national_front
+				has_completed_focus = SWI_back_the_national_front
 				NOT = { has_completed_focus = SWI_ban_national_movement_for_switzerland }
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			traits  = {
 				SWI_fascist_recruiter 
@@ -2077,7 +2188,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 			
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 4000
@@ -2111,11 +2222,14 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
 				NOT = {has_completed_focus = SWI_ban_national_movement_for_switzerland}
-				has_completed_focus = SWI_the_national_front
+				has_completed_focus = SWI_back_the_national_front
 			}
 			traits  = {
 				SWI_fascist 
@@ -2127,7 +2241,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 4000
@@ -2164,6 +2278,11 @@ characters={
 			allowed  = {
 				original_tag  = SWI
 			}
+			visible = {
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
+			}
 			available = {
 				SWI_can_be_councilor = yes
 				has_completed_focus = SWI_panoramaheim_branch
@@ -2179,7 +2298,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -2211,6 +2330,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -2226,7 +2348,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -2281,6 +2403,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -2295,7 +2420,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -2333,9 +2458,12 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000
@@ -2357,6 +2485,11 @@ characters={
 			allowed  = {
 				original_tag  = SWI
 			}
+			visible = {
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
+			}
 			available = {
 				SWI_can_be_councilor = yes
 				has_global_flag = scw_over
@@ -2372,7 +2505,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 2000
@@ -2407,6 +2540,11 @@ characters={
 			allowed  = {
 				original_tag  = SWI
 			}
+			visible = {
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
+			}
 			available = {
 				SWI_can_be_councilor = yes
 			}
@@ -2420,7 +2558,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000
@@ -2466,6 +2604,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -2480,7 +2621,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 2000
@@ -2546,6 +2687,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 			}
 			available = {
 				SWI_can_be_councilor = yes
@@ -2560,7 +2704,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 			
 			ai_will_do = {
 				base = 4000
@@ -2640,6 +2784,9 @@ characters={
 				
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				available = {
 					SWI_can_be_councilor = yes
@@ -2654,7 +2801,7 @@ characters={
 					SWI_on_remove_councilor = yes
 				}
 
-				removal_cost = -1
+				can_be_fired = no
 
 				ai_will_do = {
 					base = 500
@@ -2707,6 +2854,9 @@ characters={
 				idea_token = SWI_giuseppe_motta
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				available = {
 					SWI_can_be_councilor = yes
@@ -2724,7 +2874,7 @@ characters={
 					SWI_on_remove_councilor = yes
 				}
 
-				removal_cost = -1
+				can_be_fired = no
 
 				ai_will_do = {
 					base = 4000
@@ -2783,6 +2933,9 @@ characters={
 				}
 				visible = {
 					SWI_councilor_visible = yes
+					NOT = {
+						has_global_flag = SWI_R56_focus_tree
+					}
 				}
 				available = {
 					SWI_can_be_councilor = yes
@@ -2798,7 +2951,7 @@ characters={
 					SWI_on_remove_councilor = yes
 				}
 
-				removal_cost = -1
+				can_be_fired = no
 				
 				ai_will_do = {
 					base = 4000
@@ -2828,6 +2981,9 @@ characters={
 			}
 			visible = {
 				SWI_councilor_visible = yes
+				NOT = {
+					has_global_flag = SWI_R56_focus_tree
+				}
 				has_completed_focus = SWI_gotthard_union
 			}
 			available = {
@@ -2843,7 +2999,7 @@ characters={
 				SWI_on_remove_councilor = yes
 			}
 
-			removal_cost = -1
+			can_be_fired = no
 
 			ai_will_do = {
 				base = 4000

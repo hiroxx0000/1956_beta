@@ -35,7 +35,7 @@ continent = {
 	army = {
 		male = {
 			"GFX_Portrait_Japan_Generic_land_1"
-			"GFX_Portrait_Japan_Generic_land_2"
+			#"GFX_Portrait_Japan_Generic_land_2"
 			"GFX_Portrait_Japan_Generic_land_3"
 			"GFX_Portrait_Japan_Generic_land_4"
 			"GFX_Portrait_Japan_Generic_land_5"
@@ -63,6 +63,10 @@ continent = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_asia_1.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_asia_2.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_asia_3.dds"
+		}
+		female = {
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_asia_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_asia_2.dds"
 		}
 	}		
 }
@@ -210,7 +214,8 @@ continent = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"	
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -233,7 +238,8 @@ continent = {
 				"gfx/leaders/kr_generic/Portrait_Europe_Generic_new_14.dds"
 				"gfx/leaders/kr_generic/Portrait_Europe_Generic_new_15.dds"
 				"gfx/leaders/kr_generic/Portrait_Europe_Generic_new_16.dds"
-				"gfx/leaders/kr_generic/Portrait_Europe_Generic_new_17.dds"			
+				"gfx/leaders/kr_generic/Portrait_Europe_Generic_new_17.dds"		
+					
 			}
 		}
 	}
@@ -259,7 +265,8 @@ continent = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"					
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"															
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"														
 		}
 	}	
 }
@@ -269,15 +276,21 @@ continent = {
 	army = {
 		male = {
 			"gfx/leaders/Africa/Portrait_Africa_Generic_land_4.dds"
-			"gfx/leaders/r56_generic/r56_portrait_generic_general_africa_1.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_1.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_2.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_3.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_4.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_5.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_6.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_7.dds"
-			"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_8.dds"				
+			
+			"GFX_portrait_kr_generic_africa_land_1"
+			"GFX_portrait_kr_generic_africa_land_2"
+			"GFX_portrait_kr_generic_africa_land_3"
+			"GFX_portrait_kr_generic_africa_land_4"
+			"GFX_portrait_kr_generic_africa_land_5"
+			"GFX_portrait_kr_generic_africa_land_6"
+			"GFX_portrait_kr_generic_africa_land_7"
+			"GFX_portrait_kr_generic_africa_land_8"	
+			"GFX_portrait_r56_portrait_generic_general_africa_1"
+			"GFX_portrait_r56_portrait_generic_general_africa_2"	
+			"GFX_portrait_r56_portrait_generic_general_africa_3"
+			"GFX_portrait_r56_portrait_generic_general_africa_4"
+			"GFX_portrait_r56_portrait_generic_general_africa_5"
+			"GFX_portrait_r56_portrait_generic_general_africa_6"		
 		}
 		female = {
 			"gfx/leaders/r56_generic/r56_portrait_Africa_Female_Generic_land_1.dds"
@@ -306,6 +319,8 @@ continent = {
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_6.dds"
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_7.dds"
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_8.dds"
+					"GFX_Portrait_r56_generic_politician_africa_3"
+					"GFX_Portrait_r56_generic_politician_africa_4"
 			}
 		}
 		democratic = {
@@ -318,20 +333,22 @@ continent = {
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_5.dds"
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_6.dds"
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_7.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_8.dds"					
+					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_8.dds"	
+					"GFX_Portrait_r56_generic_politician_africa_3"
+					"GFX_Portrait_r56_generic_politician_africa_4"		
 			}
 		}
 		fascism = {
 				male = { 
 					"gfx/leaders/Africa/Portrait_Africa_Generic_4.dds" 
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_1.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_2.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_3.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_4.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_5.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_6.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_7.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_land_new_8.dds"						
+					"GFX_portrait_kr_generic_africa_land_1"
+					"GFX_portrait_kr_generic_africa_land_2"
+					"GFX_portrait_kr_generic_africa_land_3"
+					"GFX_portrait_kr_generic_africa_land_4"
+					"GFX_portrait_kr_generic_africa_land_5"
+					"GFX_portrait_kr_generic_africa_land_6"
+					"GFX_portrait_kr_generic_africa_land_7"
+					"GFX_portrait_kr_generic_africa_land_8"						
 			}
 		}
 		neutrality = {
@@ -344,7 +361,9 @@ continent = {
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_5.dds"
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_6.dds"
 					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_7.dds"
-					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_8.dds"					
+					"gfx/leaders/kr_generic/Portrait_Africa_Generic_new_8.dds"	
+					"GFX_Portrait_r56_generic_politician_africa_3"
+					"GFX_Portrait_r56_generic_politician_africa_4"			
 			}
 		}
 	}
@@ -362,6 +381,11 @@ continent = {
 		male = {
 			"GFX_Portrait_r56_generic_land_south_america_bartolome_blanche"
 			"GFX_Portrait_r56_portrait_generic_land_south_america_camilo_alonso_vega"
+			"GFX_portrait_r56_portrait_PRU_generic_land_1"
+			"GFX_portrait_r56_portrait_PRU_generic_land_2"
+			"GFX_portrait_r56_portrait_PRU_generic_land_3"
+			"GFX_portrait_r56_portrait_PRU_generic_land_4"
+			"GFX_portrait_r56_portrait_PRU_generic_land_5"
 		}
 	}
 	navy = {
@@ -390,7 +414,7 @@ continent = {
 		neutrality = {
 			male = { 
 				"GFX_Portrait_r56_generic_land_south_america_bartolome_blanche"
-			"GFX_Portrait_r56_portrait_generic_land_south_america_camilo_alonso_vega"
+				"GFX_Portrait_r56_portrait_generic_land_south_america_camilo_alonso_vega"
 			}
 		}		
 	}
@@ -446,8 +470,20 @@ FRA = {
 	army = {
 		male = {
 			"GFX_portrait_r56_FRA_land_1"
+			"GFX_Portrait_France_KR_Generic_land_1"
+			"GFX_Portrait_France_KR_Generic_land_2"
+			"GFX_Portrait_France_KR_Generic_land_3"
+			"GFX_Portrait_France_KR_Generic_land_4"
+			"GFX_Portrait_France_KR_Generic_land_5"
 		}
 	}
+	navy = {
+		male = {
+			"GFX_Portrait_France_KR_Generic_navy_1"
+			"GFX_Portrait_France_KR_Generic_navy_2"
+			"GFX_Portrait_France_KR_Generic_navy_3"
+		}
+	}	
 	political = {
 		communism = {
 			male = {
@@ -479,7 +515,7 @@ FRA = {
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
 				"gfx/leaders/SOV/Portrait_Soviet_Victor_Baydalakov.dds"
-				"gfx/leaders/DEV/Portrait_SWE_daniel_sjöberg.dds"
+				"gfx/leaders/DEV/portrait_SWE_daniel_sjöberg.dds"
 			}
 		}
 		neutrality = {
@@ -487,7 +523,7 @@ FRA = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"			
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -565,7 +601,8 @@ FRA = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"							
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"						
 		}
 	}	
 }
@@ -579,6 +616,7 @@ FRI = {
 			"GFX_Portrait_France_Generic_land_4"
 			"GFX_Portrait_France_Generic_land_5"
 			"GFX_portrait_r56_FRA_land_1"
+		
 		}
 	}
 	
@@ -587,6 +625,9 @@ FRI = {
 			"gfx/leaders/FRA/Portrait_France_Generic_navy_1.dds"
 			"gfx/leaders/FRA/Portrait_France_Generic_navy_2.dds"
 			"gfx/leaders/FRA/Portrait_France_Generic_navy_3.dds"
+			"GFX_Portrait_France_KR_Generic_navy_1"
+			"GFX_Portrait_France_KR_Generic_navy_2"
+			"GFX_Portrait_France_KR_Generic_navy_3"				
 		}
 	}
 }
@@ -655,7 +696,8 @@ MEX = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_5.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"							
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"						
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_south_america_1.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_south_america_2.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_south_america_3.dds"
@@ -677,6 +719,11 @@ HAI = {
 			"GFX_Portrait_South_Africa_Army_Generic"
 			"GFX_Portrait_South_Africa_Army_Generic_2"	
 			"GFX_portrait_r56_portrait_generic_general_africa_1"	
+			"GFX_portrait_r56_portrait_generic_general_africa_2"	
+			"GFX_portrait_r56_portrait_generic_general_africa_3"
+			"GFX_portrait_r56_portrait_generic_general_africa_4"
+			"GFX_portrait_r56_portrait_generic_general_africa_5"
+			"GFX_portrait_r56_portrait_generic_general_africa_6"
 		}
 		female = {
 			"gfx/leaders/r56_generic/r56_portrait_Africa_Female_Generic_land_1.dds"
@@ -707,14 +754,32 @@ HAI = {
 		fascism = {
 				male = {
 					"gfx/leaders/Africa/Portrait_Africa_Generic_3.dds"
-					"GFX_portrait_r56_portrait_generic_general_africa_1"	
+					"GFX_portrait_r56_portrait_generic_general_africa_1"
+					"GFX_portrait_r56_portrait_generic_general_africa_2"	
+					"GFX_portrait_r56_portrait_generic_general_africa_3"
+					"GFX_portrait_r56_portrait_generic_general_africa_4"
+					"GFX_portrait_r56_portrait_generic_general_africa_5"
+					"GFX_portrait_r56_portrait_generic_general_africa_6"	
+					"GFX_portrait_kr_generic_africa_land_1"
+					"GFX_portrait_kr_generic_africa_land_2"
+					"GFX_portrait_kr_generic_africa_land_3"
+					"GFX_portrait_kr_generic_africa_land_4"
+					"GFX_portrait_kr_generic_africa_land_5"
+					"GFX_portrait_kr_generic_africa_land_6"
+					"GFX_portrait_kr_generic_africa_land_7"
+					"GFX_portrait_kr_generic_africa_land_8"						
 			}
 		}
 		neutrality = {
 				male = {
 					"gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
 					"gfx/leaders/Africa/Portrait_Africa_Generic_4.dds"
-					"GFX_portrait_r56_portrait_generic_general_africa_1"	
+					"GFX_portrait_r56_portrait_generic_general_africa_1"
+					"GFX_portrait_r56_portrait_generic_general_africa_2"	
+					"GFX_portrait_r56_portrait_generic_general_africa_3"
+					"GFX_portrait_r56_portrait_generic_general_africa_4"
+					"GFX_portrait_r56_portrait_generic_general_africa_5"
+					"GFX_portrait_r56_portrait_generic_general_africa_6"	
 					
 			}
 		}
@@ -969,6 +1034,27 @@ HYD = {
 			"gfx/leaders/Arabia/portrait_arabia_generic_operative_male_6.dds"			
 		}
 	}	
+}
+
+JAP = {
+	army = {
+		male = {
+			"GFX_Portrait_Japan_KR_Generic_land_1"
+			"GFX_Portrait_Japan_KR_Generic_land_2"
+			"GFX_Portrait_Japan_KR_Generic_land_3"
+			"GFX_Portrait_Japan_KR_Generic_land_4"
+			"GFX_Portrait_Japan_KR_Generic_land_5"
+		}
+	}
+	navy = {
+		male = {
+			"GFX_Portrait_Japan_KR_Generic_navy_1"
+			"GFX_Portrait_Japan_KR_Generic_navy_2"
+			"GFX_Portrait_Japan_KR_Generic_navy_3"
+			"GFX_Portrait_Japan_KR_Generic_navy_4"
+		}
+	}	
+
 }
 PAK = {
 	navy = {
@@ -1328,6 +1414,7 @@ BEL = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -1365,7 +1452,8 @@ BEL = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"						
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"					
 		}
 	}		
 }
@@ -1411,6 +1499,7 @@ IRE = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"	
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -1448,7 +1537,8 @@ IRE = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"				
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -1505,6 +1595,7 @@ LUX = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -1542,7 +1633,8 @@ LUX = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"				
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"				
 		}
 	}	
 }
@@ -1599,6 +1691,7 @@ FLA = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -1636,7 +1729,8 @@ FLA = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"					
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"					
 		}
 	}		
 }
@@ -1693,6 +1787,7 @@ WLL = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -1730,7 +1825,8 @@ WLL = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"	
 		}
 	}		
 }
@@ -1771,7 +1867,8 @@ GER = {
 			male = { 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"			
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -1782,23 +1879,30 @@ GER = {
 	}
 	army = {
 		male = {
-			"GFX_Portrait_Germany_Generic_land_1"
-			"GFX_Portrait_Germany_Generic_land_2"
-			"GFX_Portrait_Germany_Generic_land_3"
-			"GFX_Portrait_Germany_Generic_land_4"
-			"GFX_Portrait_Germany_Generic_land_5"
+			"GFX_Portrait_Germany_KR_Generic_land_1"
+			"GFX_Portrait_Germany_KR_Generic_land_2"
+			"GFX_Portrait_Germany_KR_Generic_land_3"
+			"GFX_Portrait_Germany_KR_Generic_land_4"
+			"GFX_Portrait_Germany_KR_Generic_land_5"
 			#unused air guys in base game as generics
 			"GFX_portrait_r56_GER_land_1"
-			"GFX_portrait_r56_GER_land_2"			
+			"GFX_portrait_r56_GER_land_2"
+			
+		#	"gfx/leaders/r56_generic/Portrait_Germany_Generic_land_1.dds" #don't exist????
+		#	"gfx/leaders/r56_generic/Portrait_Germany_Generic_land_2.dds"
+		#	"gfx/leaders/r56_generic/Portrait_Germany_Generic_land_3.dds"
+		#	"gfx/leaders/r56_generic/Portrait_Germany_Generic_land_4.dds"			
+		#	"gfx/leaders/r56_generic/Portrait_Germany_Generic_land_5.dds"
+		#	"gfx/leaders/r56_generic/Portrait_Germany_Generic_land_6.dds"	
 		}
 	}
 
 	navy = {
 		male = {
 
-			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
-			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
-			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
+			"gfx/leaders/kr_generic/Portrait_Germany_Generic_navy_1.dds"
+			"gfx/leaders/kr_generic/Portrait_Germany_Generic_navy_2.dds"
+			"gfx/leaders/kr_generic/Portrait_Germany_Generic_navy_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_GER_generic_navy_1.dds"
 			"gfx/leaders/r56_generic/r56_portrait_GER_generic_navy_2.dds"
 			"gfx/leaders/r56_generic/r56_portrait_GER_generic_navy_3.dds"
@@ -1832,6 +1936,7 @@ GER = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -1869,7 +1974,8 @@ GER = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"					
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"				
 		}
 	}	
 }
@@ -1910,7 +2016,8 @@ VGE = { #volga germans but do we want nazi uniforms?
 			male = { 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"		
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"			
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -1971,6 +2078,7 @@ VGE = { #volga germans but do we want nazi uniforms?
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -2008,7 +2116,8 @@ VGE = { #volga germans but do we want nazi uniforms?
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"				
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"			
 		}
 	}	
 }
@@ -2083,7 +2192,8 @@ ROM = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"		
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -2171,7 +2281,8 @@ MOL = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"		
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -2253,7 +2364,8 @@ TRA = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"		
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -2294,18 +2406,18 @@ TRA = {
 USA = {
 	army = {
 		male = { #miniature portraits are from new portraits of BBA dlc and not bespoke
-			"GFX_portrait_r56_USA_land_1" #don't lead with capitan america
+			#"GFX_portrait_r56_USA_land_1" #afro american, maybe use in case of desegregation but there is already a promoted general when you do it.
 			"GFX_portrait_r56_USA_land_2"
 			#Unused air guys in base game as generics, maybe use as civil war generals later idk, maybe if im feeling like it -SpicyAlfredo
 			"GFX_portrait_r56_USA_land_3"
 			"GFX_portrait_r56_USA_land_4"	
 			"GFX_portrait_r56_USA_land_5"	#Our Arnold looks more like him during ww2. This looks different enough to be used a generic as this was a older post war pic, and ours has hat :)		  
-			"GFX_portrait_kr_generic_america_land_1"
-			"GFX_portrait_kr_generic_america_land_2"
-			"GFX_portrait_kr_generic_america_land_3"
-			"GFX_portrait_kr_generic_america_land_4"
-			"GFX_portrait_kr_generic_america_land_5"
-			"GFX_portrait_kr_generic_america_land_6"
+			"GFX_Portrait_America_KR_Generic_land_1"
+			"GFX_Portrait_America_KR_Generic_land_2"
+			"GFX_Portrait_America_KR_Generic_land_3"
+			"GFX_Portrait_America_KR_Generic_land_4"
+			"GFX_Portrait_America_KR_Generic_land_5"
+			"GFX_Portrait_America_KR_Generic_land_6"
 		}
 	}
 }
@@ -2315,6 +2427,11 @@ ITA = {
 		male = {
 			"GFX_portrait_r56_ITA_land_1"
 			"GFX_portrait_r56_ITA_land_2"
+			"GFX_Portrait_Italy_Generic_land_green_1"			
+			"GFX_Portrait_Italy_Generic_land_green_2"			
+			"GFX_Portrait_Italy_Generic_land_green_3"			
+			"GFX_Portrait_Italy_Generic_land_green_4"			
+			"GFX_Portrait_Italy_Generic_land_green_5"
 		}
 	}
 }
@@ -2511,7 +2628,8 @@ CNR = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"	
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -2804,7 +2922,8 @@ GLC = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"	
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -2951,7 +3070,8 @@ NAP = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"					
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_5.dds"		
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_6.dds"
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
@@ -3357,6 +3477,7 @@ DDR = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -3394,7 +3515,8 @@ DDR = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"				
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"					
 		}
 	}	
 }
@@ -3498,6 +3620,7 @@ WGR = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -3535,7 +3658,8 @@ WGR = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"							
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"								
 		}
 	}	
 }
@@ -3716,6 +3840,7 @@ PRE = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -3753,7 +3878,8 @@ PRE = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"				
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"					
 		}
 	}	
 }
@@ -3859,6 +3985,7 @@ HAN = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -3896,7 +4023,8 @@ HAN = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"							
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"								
 		}
 	}	
 }
@@ -4039,7 +4167,8 @@ SAX = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -4145,6 +4274,7 @@ WUR = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -4182,7 +4312,8 @@ WUR = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -4288,6 +4419,7 @@ SHL = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -4325,7 +4457,8 @@ SHL = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -5012,7 +5145,8 @@ SWE = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -5118,6 +5252,7 @@ SMI = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -5156,6 +5291,7 @@ SMI = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"				
 		}
 	}		
 }
@@ -5261,6 +5397,7 @@ DEN = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -5298,7 +5435,8 @@ DEN = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}		
 }
@@ -5404,6 +5542,7 @@ FIN = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -5441,7 +5580,8 @@ FIN = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}		
 }
@@ -5547,6 +5687,7 @@ ICE = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -5585,6 +5726,7 @@ ICE = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"				
 		}
 	}		
 }
@@ -5690,6 +5832,7 @@ KAR = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -5727,7 +5870,8 @@ KAR = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}		
 }
@@ -5833,6 +5977,7 @@ NOR = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -5870,7 +6015,8 @@ NOR = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}		
 }
@@ -5920,6 +6066,7 @@ SOV = {
 				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
 			}
 		}
+		
 	}	
 	army = {
 		male = {
@@ -6001,7 +6148,8 @@ SOV = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		
 		}
 	}	
@@ -6139,7 +6287,8 @@ SOV_Russian_Empire = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		
 		}
 	}
@@ -6279,7 +6428,8 @@ SOV3 = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		
 		}
 	}
@@ -6630,6 +6780,7 @@ GEO = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Arabia/portrait_arabia_generic_operative_male_1.dds"
@@ -6787,10 +6938,17 @@ KAL = {
 			"GFX_Portrait_Asia_Generic_land_4"
 			"GFX_Portrait_Asia_Generic_land_5"
 			"GFX_Portrait_Japan_Generic_land_1"
-			"GFX_Portrait_Japan_Generic_land_2"
+			#"GFX_Portrait_Japan_Generic_land_2"
 			"GFX_Portrait_Japan_Generic_land_3"
 			"GFX_Portrait_Japan_Generic_land_4"
 			"GFX_Portrait_Japan_Generic_land_5"
+			"GFX_portrait_kr_generic_asia_land_1"
+			"GFX_portrait_kr_generic_asia_land_2"
+			"GFX_portrait_kr_generic_asia_land_3"
+			"GFX_portrait_kr_generic_asia_land_4"
+			"GFX_portrait_kr_generic_asia_land_5"
+			"GFX_portrait_kr_generic_asia_land_6"
+			"GFX_portrait_kr_generic_asia_land_7"			
 		}
 	}
 	
@@ -7362,6 +7520,108 @@ KYR = {
 		}
 	}	
 }
+
+CRI = { #crimea
+	army = {
+		male = {
+			
+			"GFX_portrait_kr_generic_central_asia_land_1"
+			"GFX_portrait_kr_generic_central_asia_land_2"
+			"GFX_portrait_kr_generic_central_asia_land_3"
+			"GFX_portrait_kr_generic_central_asia_land_4"
+			"GFX_portrait_kr_generic_central_asia_land_5"
+			"GFX_portrait_kr_generic_central_asia_land_6"
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_Portrait_Asia_Generic_navy_1"
+			"GFX_Portrait_Asia_Generic_navy_2"
+			"GFX_Portrait_Asia_Generic_navy_3"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_navy_1.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_navy_2.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_navy_3.dds"			
+		}
+	}
+	operative = {
+
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_asia_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_asia_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_asia_3.dds"
+			"GFX_portrait_asia_generic_operative_m_1"
+			"GFX_portrait_asia_generic_operative_m_2"
+			"GFX_portrait_asia_generic_operative_m_3"
+			"GFX_portrait_asia_generic_operative_m_4"
+			"GFX_portrait_asia_generic_operative_m_5"
+			"GFX_portrait_asia_generic_operative_m_6"
+			"GFX_portrait_asia_generic_operative_m_7"
+			"GFX_portrait_asia_generic_operative_m_8"
+			"GFX_portrait_asia_generic_operative_m_9"
+		
+		}
+		female = {
+			"GFX_portrait_asia_generic_operative_f_1"
+			"GFX_portrait_asia_generic_operative_f_2"
+			"GFX_portrait_asia_generic_operative_f_3"
+			"GFX_portrait_asia_generic_operative_f_4"
+			"GFX_portrait_asia_generic_operative_f_5"
+			"GFX_portrait_asia_generic_operative_f_6"
+			"GFX_portrait_asia_generic_operative_f_7"
+			"GFX_portrait_asia_generic_operative_f_8"
+			"GFX_portrait_asia_generic_operative_f_9"
+		
+		}		
+	}
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_1.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_2.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_3.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_4.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_5.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_6.dds"					
+			}
+		}
+		democratic = {
+			male = { 
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_1.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_2.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_3.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_4.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_5.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_6.dds"
+				"gfx/leaders/asia/Portrait_Asia_Generic_2.dds"
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_1.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_2.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_3.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_4.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_5.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_6.dds"	
+				"gfx/leaders/asia/Portrait_Asia_Generic_fascism.dds"				
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_1.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_2.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_3.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_4.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_5.dds"	
+				"gfx/leaders/kr_generic/Portrait_Central_Asia_Generic_new_6.dds"
+				"gfx/leaders/asia/Portrait_Asia_Generic_fascism.dds"
+			}
+		}
+	}	
+}
+
+
 ISR = {
 	political = {
 		communism = {
@@ -7550,11 +7810,14 @@ ENG = {
 	}
 	army = {
 		male = {
-			"GFX_Portrait_Britain_Generic_land_1"
-			"GFX_Portrait_Britain_Generic_land_2"
-			"GFX_Portrait_Britain_Generic_land_3"
-			"GFX_Portrait_Britain_Generic_land_4"
-			"GFX_Portrait_Britain_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
 			"GFX_portrait_r56_commonwealth_land_1"
 			"GFX_portrait_r56_commonwealth_land_2"
 			"GFX_portrait_r56_commonwealth_land_3"
@@ -7564,17 +7827,16 @@ ENG = {
 			"GFX_portrait_r56_commonwealth_land_7"
 			"GFX_portrait_r56_commonwealth_land_8"
 			"GFX_portrait_ENG_thomas_moore"
-			"GFX_portrait_europe_generic_land_7"
-			"GFX_portrait_europe_generic_land_8"
-			"GFX_portrait_europe_generic_land_9"			
+
 		}
+			
 	}
 
 	navy = {
 		male = {
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
 			
 			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
 		}
@@ -7606,6 +7868,7 @@ ENG = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -7643,7 +7906,8 @@ ENG = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}		
 }
@@ -7750,6 +8014,7 @@ SCO = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -7787,7 +8052,8 @@ SCO = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -7892,6 +8158,7 @@ WLS = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -7930,6 +8197,7 @@ WLS = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"			
 		}
 	}
 }
@@ -8055,11 +8323,14 @@ SAF_ENG = {
 	}
 	army = {
 		male = {
-			"GFX_Portrait_Britain_Generic_land_1"
-			"GFX_Portrait_Britain_Generic_land_2"
-			"GFX_Portrait_Britain_Generic_land_3"
-			"GFX_Portrait_Britain_Generic_land_4"
-			"GFX_Portrait_Britain_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
 			"GFX_portrait_r56_commonwealth_land_1"
 			"GFX_portrait_r56_commonwealth_land_2"
 			"GFX_portrait_r56_commonwealth_land_3"
@@ -8068,20 +8339,19 @@ SAF_ENG = {
 			"GFX_portrait_r56_commonwealth_land_6"
 			"GFX_portrait_r56_commonwealth_land_7"
 			"GFX_portrait_r56_commonwealth_land_8"
-			"GFX_portrait_ENG_thomas_moore"			
-			"GFX_portrait_europe_generic_land_7"
-			"GFX_portrait_europe_generic_land_8"
-			"GFX_portrait_europe_generic_land_9"			
+			"GFX_portrait_ENG_thomas_moore"
+
 		}
+			
 	}
 
 	navy = {
 		male = {
-			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
 			
+			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
 		}
 	}
 	operative = {
@@ -8111,6 +8381,7 @@ SAF_ENG = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -8148,7 +8419,8 @@ SAF_ENG = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -8163,6 +8435,11 @@ SAF = {
 			"GFX_Portrait_South_Africa_Army_Generic"
 			"GFX_Portrait_South_Africa_Army_Generic_2"
 			"GFX_portrait_r56_portrait_generic_general_africa_1"
+			"GFX_portrait_r56_portrait_generic_general_africa_2"	
+			"GFX_portrait_r56_portrait_generic_general_africa_3"
+			"GFX_portrait_r56_portrait_generic_general_africa_4"
+			"GFX_portrait_r56_portrait_generic_general_africa_5"
+			"GFX_portrait_r56_portrait_generic_general_africa_6"
 		}
 		female = {
 			"gfx/leaders/r56_generic/r56_portrait_Africa_Female_Generic_land_1.dds"
@@ -8238,11 +8515,14 @@ SAF = {
 MAL_UK = {
 	army = {
 		male = {
-			"GFX_Portrait_Britain_Generic_land_1"
-			"GFX_Portrait_Britain_Generic_land_2"
-			"GFX_Portrait_Britain_Generic_land_3"
-			"GFX_Portrait_Britain_Generic_land_4"
-			"GFX_Portrait_Britain_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
 			"GFX_portrait_r56_commonwealth_land_1"
 			"GFX_portrait_r56_commonwealth_land_2"
 			"GFX_portrait_r56_commonwealth_land_3"
@@ -8251,19 +8531,19 @@ MAL_UK = {
 			"GFX_portrait_r56_commonwealth_land_6"
 			"GFX_portrait_r56_commonwealth_land_7"
 			"GFX_portrait_r56_commonwealth_land_8"
-			"GFX_portrait_ENG_thomas_moore"			
-			"GFX_portrait_europe_generic_land_7"
-			"GFX_portrait_europe_generic_land_8"
-			"GFX_portrait_europe_generic_land_9"			
+			"GFX_portrait_ENG_thomas_moore"
+
 		}
+			
 	}
 
 	navy = {
 		male = {
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
+			
 			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
 		}
 	}
 	operative = {
@@ -8293,6 +8573,7 @@ MAL_UK = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -8330,12 +8611,46 @@ MAL_UK = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
 
 RAJ_UK = {
+	army = {
+		male = {
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
+			"GFX_portrait_r56_commonwealth_land_1"
+			"GFX_portrait_r56_commonwealth_land_2"
+			"GFX_portrait_r56_commonwealth_land_3"
+			"GFX_portrait_r56_commonwealth_land_4"
+			"GFX_portrait_r56_commonwealth_land_5"
+			"GFX_portrait_r56_commonwealth_land_6"
+			"GFX_portrait_r56_commonwealth_land_7"
+			"GFX_portrait_r56_commonwealth_land_8"
+			"GFX_portrait_ENG_thomas_moore"
+
+		}
+			
+	}
+
+	navy = {
+		male = {
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
+			
+			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
+		}
+	}	
 	army = {
 		male = {
 			"GFX_Portrait_Britain_Generic_land_1"
@@ -8435,6 +8750,7 @@ RAJ_UK = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -8472,7 +8788,8 @@ RAJ_UK = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}		
 }
@@ -8610,11 +8927,14 @@ AST = {
 	}
 	army = {
 		male = {
-			"GFX_Portrait_Britain_Generic_land_1"
-			"GFX_Portrait_Britain_Generic_land_2"
-			"GFX_Portrait_Britain_Generic_land_3"
-			"GFX_Portrait_Britain_Generic_land_4"
-			"GFX_Portrait_Britain_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
 			"GFX_portrait_r56_commonwealth_land_1"
 			"GFX_portrait_r56_commonwealth_land_2"
 			"GFX_portrait_r56_commonwealth_land_3"
@@ -8623,7 +8943,8 @@ AST = {
 			"GFX_portrait_r56_commonwealth_land_6"
 			"GFX_portrait_r56_commonwealth_land_7"
 			"GFX_portrait_r56_commonwealth_land_8"
-			"GFX_portrait_ENG_thomas_moore"			
+			"GFX_portrait_ENG_thomas_moore"
+		
 			"GFX_portrait_europe_generic_land_7"
 			"GFX_portrait_europe_generic_land_8"
 			"GFX_portrait_europe_generic_land_9"			
@@ -8633,9 +8954,9 @@ AST = {
 	navy = {
 		male = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
 			
 		}
 	}
@@ -8666,6 +8987,7 @@ AST = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -8703,7 +9025,8 @@ AST = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -8753,11 +9076,14 @@ CAN = {
 	}
 	army = {
 		male = {
-			"GFX_Portrait_Britain_Generic_land_1"
-			"GFX_Portrait_Britain_Generic_land_2"
-			"GFX_Portrait_Britain_Generic_land_3"
-			"GFX_Portrait_Britain_Generic_land_4"
-			"GFX_Portrait_Britain_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
 			"GFX_portrait_r56_commonwealth_land_1"
 			"GFX_portrait_r56_commonwealth_land_2"
 			"GFX_portrait_r56_commonwealth_land_3"
@@ -8766,19 +9092,20 @@ CAN = {
 			"GFX_portrait_r56_commonwealth_land_6"
 			"GFX_portrait_r56_commonwealth_land_7"
 			"GFX_portrait_r56_commonwealth_land_8"
-			"GFX_portrait_ENG_thomas_moore"			
+			"GFX_portrait_ENG_thomas_moore"
+		
 			"GFX_portrait_europe_generic_land_7"
 			"GFX_portrait_europe_generic_land_8"
-			"GFX_portrait_europe_generic_land_9"
+			"GFX_portrait_europe_generic_land_9"			
 		}
 	}
 
 	navy = {
 		male = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
 			
 		}
 	}
@@ -8809,6 +9136,7 @@ CAN = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -8846,7 +9174,8 @@ CAN = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -8896,11 +9225,14 @@ NZL = {
 	}
 	army = {
 		male = {
-			"GFX_Portrait_Britain_Generic_land_1"
-			"GFX_Portrait_Britain_Generic_land_2"
-			"GFX_Portrait_Britain_Generic_land_3"
-			"GFX_Portrait_Britain_Generic_land_4"
-			"GFX_Portrait_Britain_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_1"
+			"GFX_Portrait_Britain_KR_Generic_land_2"
+			"GFX_Portrait_Britain_KR_Generic_land_3"
+			"GFX_Portrait_Britain_KR_Generic_land_4"
+			"GFX_Portrait_Britain_KR_Generic_land_5"
+			"GFX_Portrait_Britain_KR_Generic_land_6"	
+			"GFX_Portrait_Britain_KR_Generic_land_7"
+
 			"GFX_portrait_r56_commonwealth_land_1"
 			"GFX_portrait_r56_commonwealth_land_2"
 			"GFX_portrait_r56_commonwealth_land_3"
@@ -8909,7 +9241,8 @@ NZL = {
 			"GFX_portrait_r56_commonwealth_land_6"
 			"GFX_portrait_r56_commonwealth_land_7"
 			"GFX_portrait_r56_commonwealth_land_8"
-			"GFX_portrait_ENG_thomas_moore"			
+			"GFX_portrait_ENG_thomas_moore"
+		
 			"GFX_portrait_europe_generic_land_7"
 			"GFX_portrait_europe_generic_land_8"
 			"GFX_portrait_europe_generic_land_9"			
@@ -8919,9 +9252,9 @@ NZL = {
 	navy = {
 		male = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_navy_europe_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
+			"GFX_Portrait_Britain_KR_Generic_navy_1"
+			"GFX_Portrait_Britain_KR_Generic_navy_2"
+			"GFX_Portrait_Britain_KR_Generic_navy_3"
 			
 		}
 	}
@@ -8952,6 +9285,7 @@ NZL = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_24.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_25.dds"
 			"gfx/leaders/Europe/portrait_europe_generic_operative_female_26.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_female_europe_1.dds"
 		}
 		male = {
 			"gfx/leaders/Europe/portrait_europe_generic_operative_male_1.dds"
@@ -8989,7 +9323,8 @@ NZL = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_8.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
-			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"	
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"						
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"		
 		}
 	}	
 }
@@ -9827,6 +10162,7 @@ AOI = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_9.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_10.dds"			
 			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_11.dds"		
+			"gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds"			
 		}
 	}	
 }
@@ -9866,6 +10202,11 @@ TML = {
 			"GFX_Portrait_Africa_Generic_land_3"
 			"GFX_Portrait_Africa_Generic_land_4"
 			"GFX_portrait_r56_portrait_generic_general_africa_1"
+			"GFX_portrait_r56_portrait_generic_general_africa_2"	
+			"GFX_portrait_r56_portrait_generic_general_africa_3"
+			"GFX_portrait_r56_portrait_generic_general_africa_4"
+			"GFX_portrait_r56_portrait_generic_general_africa_5"
+			"GFX_portrait_r56_portrait_generic_general_africa_6"
 		}
 	}
 	navy = {

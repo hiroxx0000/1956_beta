@@ -10,6 +10,70 @@
 # alliance
 # influence
 
+
+R56_SOV_worry_about_the_whole_being_invaded_thing_first = { 
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		ROOT = {
+			exists = yes
+			surrender_progress > 0.01
+			has_war = yes
+			NOT = { #Exceptions
+				OR = {
+					has_war_with = USA
+					has_war_with = JAP
+					has_war_with = ENG
+				}
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -999
+	}
+}
+
+R56_SOV_no_BUL_naval_invasion_yet = { #This is funny and I support it, but let's chill on this if we're being invade
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		ROOT = {
+			exists = yes
+			surrender_progress > 0.01
+			has_war = yes
+		}
+		BUL = {
+			exists = yes
+			has_war_with = ROOT
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "BUL"			
+		value = -750
+	}
+
+	ai_strategy = {
+        type = area_priority
+        id = balkans 
+        value = -200
+	}
+
+}
+
 R56_SOV_no_ITA_naval_invasion_yet = { #This is funny and I support it, but let's chill on this if we're being invade
 
 	allowed = {
@@ -19,7 +83,8 @@ R56_SOV_no_ITA_naval_invasion_yet = { #This is funny and I support it, but let's
 	enable = {
 		ROOT = {
 			exists = yes
-			surrender_progress > 0.05
+			surrender_progress > 0.01
+			has_war = yes
 		}
 		ITA = {
 			exists = yes
@@ -32,7 +97,7 @@ R56_SOV_no_ITA_naval_invasion_yet = { #This is funny and I support it, but let's
 	ai_strategy = {
 		type = invade
 		id = "ITA"			
-		value = -200
+		value = -750
 	}
 
 }
@@ -46,7 +111,8 @@ R56_SOV_no_ROM_naval_invasion_yet = { #This is funny but let's chill on this if 
 	enable = {
 		ROOT = {
 			exists = yes
-			surrender_progress > 0.05
+			surrender_progress > 0.01
+			has_war = yes
 		}
 		ROM = {
 			exists = yes
@@ -59,7 +125,7 @@ R56_SOV_no_ROM_naval_invasion_yet = { #This is funny but let's chill on this if 
 	ai_strategy = {
 		type = invade
 		id = "ROM"			
-		value = -200
+		value = -750
 	}
 
 }
@@ -73,7 +139,7 @@ R56_SOV_no_GER_naval_invasion_yet = { #This is funny but let's chill on this if 
 	enable = {
 		ROOT = {
 			exists = yes
-			surrender_progress > 0.05
+			surrender_progress > 0.01
 		}
 		GER = {
 			exists = yes
@@ -86,7 +152,7 @@ R56_SOV_no_GER_naval_invasion_yet = { #This is funny but let's chill on this if 
 	ai_strategy = {
 		type = invade
 		id = "GER"			
-		value = -200
+		value = -750
 	}
 
 }
@@ -163,6 +229,7 @@ R56_SOV_be_nice_to_SIK_dude_he_is_like_only_warlord_friend = { #Prevents random 
 SOV_build_2M_army = {
 	allowed = { tag = SOV }
 	enable = { 
+		exists = yes
 		AND = {
 			date < 1940.1.1
 			has_army_manpower = { size < 2000000 }
@@ -183,13 +250,17 @@ SOV_build_2M_army = {
 
 	ai_strategy = { 
 		type = force_build_armies
-		value = 200 
+		value = 225
 	}
 }
 
 SOV_build_3_2M_army = {
 	allowed = { tag = SOV }
 	enable = {
+		exists = yes
+		ROOT = {
+			has_war = no
+		}
 		AND = {
 			date > 1940.1.1
 			has_army_manpower = { size < 3200000 }
@@ -211,12 +282,11 @@ SOV_build_3_2M_army = {
 SOV_manpower_issue = { #Let Stalin Cook
 	allowed = { tag = SOV }
 	enable = {
+		exists = yes
 		date > 1937.1.1 #Allow him to make mega army due to Axis power creep inrecent DLC's -SpicyAlfredo
 		OR = {
-			threat > 0.15
 			has_idea = disarmed_nation
 			has_idea = volunteer_only
-			date > 1939.1.1
 		}
 	}
 	
@@ -241,7 +311,7 @@ SOV_manpower_issue = { #Let Stalin Cook
 	ai_strategy = {
 		type = pp_spend_priority
 		id = mobilization_laws
-		value = 250
+		value = 999
 	}
 
 	ai_strategy = { #atleast
@@ -257,7 +327,11 @@ R56_SOV_dont_switch_start_t26_production_to_bt7_right_away = { #Allows soviets t
 	}
 
 	enable = {
+		exists = yes
 		date < "1938.3.1" #we can switch after this
+		NOT = {
+			has_war_with = MAN
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -265,19 +339,25 @@ R56_SOV_dont_switch_start_t26_production_to_bt7_right_away = { #Allows soviets t
 	ai_strategy = {
 		type = production_upgrade_desire_offset
 		id = light_tank_chassis_2
-		value = -250
+		value = -300
 	}
 
 	ai_strategy = { #don't switch tp A20 when we don't have tech yet
 		type = production_upgrade_desire_offset
 		id = medium_tank_chassis_1
-		value = -250
+		value = -375
 	}	
 	
 	ai_strategy = { #Side not don't send tanks here just from them to die to low supply. Okay?
 		type = front_armor_score
 		id = "MAN"
-		value = -250
+		value = -375
+	}
+
+	ai_strategy = { #Side not don't send tanks here just from them to die to low supply. Okay?
+		type = prepare_for_war
+		id = "MAN"			
+		value = -100
 	}
 
 	ai_strategy = { 
@@ -314,7 +394,7 @@ R56_SOV_t34_time = {
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = 10
+		value = 15
 	}
 
 	ai_strategy = {
@@ -373,7 +453,7 @@ r56_SOV_prepare_for_finland_war = {
 				}
 			}
 			ROOT = {
-				surrender_progress > 0.20
+				surrender_progress > 0.12
 			}
 		}
 		ROOT = {
@@ -397,7 +477,7 @@ r56_SOV_save_some_guns_in_the_back_for_german_invasion = {
 
 	enable = {
 		#original_tag = SOV
-		date > 1941.1.1 #start the stockpile at this date
+		date > 1941.2.1 #start the stockpile at this date
 		date < 1941.8.1 #stop the stockpile at this date
 		is_historical_focus_on = yes
 		ROOT = {
@@ -447,11 +527,11 @@ r56_SOV_need_to_stockpile_and_save_for_ww2 = {
 	enable = {
 		#original_tag = SOV
 		date > 1940.10.10 #slow down the build up at this date
-		date < 1941.4.1
+		date < 1941.3.1
 		ROOT = {
 			is_major = yes
 			exists = yes
-			surrender_progress < 0.02
+			surrender_progress < 0.01
 		}
 		if = {
 			limit = {
@@ -1169,7 +1249,7 @@ SOV_reduce_armor_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = -15
+		value = -20
 	}
 	
 	ai_strategy = {
@@ -1190,7 +1270,7 @@ SOV_reduce_armor_production_2 = {
 		has_army_manpower = { type = infantry size > 3300000 }
 	}
 
-	ai_strategy = { type = equipment_production_factor id = armor               value = -20 }
+	ai_strategy = { type = equipment_production_factor id = armor  value = -25 }
 }
 
 SOV_increase_armor_production = {
@@ -1203,7 +1283,7 @@ SOV_increase_armor_production = {
 		has_army_manpower = { type = infantry size < 1700000 }
 	}
 
-	ai_strategy = { type = equipment_production_factor id = armor               value = 10 }
+	ai_strategy = { type = equipment_production_factor id = armor value = 10 }
 }
 
 SOV_MIN_convoy_building = {
@@ -1249,76 +1329,64 @@ SOV_dont_naval_invade_axis = {
 	}
 
 	abort_when_not_enabled = yes
-
+	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 168
-		value = 800
-	}
-
+		type = invasion_unit_request
+		strategic_region = 29
+		value = -999
+	}	
+	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 29
-		value = 800
+		type = invasion_unit_request
+		strategic_region = 30
+		value = -999
 	}
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 169
-		value = 800
-	}
-
-	ai_strategy = {
-		type = naval_avoid_region
-		id = 18
-		value = 800
-	}		
-
-	ai_strategy = {
-		type = naval_avoid_region
-		id = 42
-		value = 800
+		type = invasion_unit_request
+		strategic_region = 9
+		value = -999
 	}
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 173
-		value = 800
+		type = invasion_unit_request
+		strategic_region = 69
+		value = -999
+	}	
+	
+	ai_strategy = {
+		type = invasion_unit_request
+		strategic_region = 206
+		value = -999
 	}
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 174
-		value = 800
+		type = invasion_unit_request
+		strategic_region = 9
+		value = -999
 	}
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 206
-		value = 800
+		type = invasion_unit_request
+		strategic_region = 174
+		value = -999
 	}
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 207
-		value = 800
-	}
+		type = invasion_unit_request
+		strategic_region = 202
+		value = -999
+	}	
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 9
-		value = 800
-	}
+		type = invasion_unit_request
+		strategic_region = 168
+		value = -999
+	}	
 	
 	ai_strategy = {
-		type = naval_avoid_region
-		id = 30
-		value = 600
-	}
-
-	ai_strategy = {
-		type = naval_avoid_region
-		id = 46
-		value = 600
+		type = invasion_unit_request
+		strategic_region = 169
+		value = -999
 	}		
 }

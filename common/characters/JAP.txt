@@ -1053,6 +1053,12 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				OR = {
+					has_completed_focus = JAP_ultimate_deterrence
+					has_completed_focus = JAP_nishina_okochi_directive
+				}
+			}
 			research_bonus = {
 				nuclear = 0.150
 			}
@@ -1101,7 +1107,10 @@ characters={
 			idea_token = kanin_kotohito
 			available = {
 				OR = {
-					has_country_leader = {  ruling_only = yes name = "Michinomiya Hirohito" }
+					has_country_leader = {
+						character = JAP_emperor_hirohito
+						ruling_only = yes
+					}
 					has_idea = JAP_hirohito
 				}
 				
@@ -1164,7 +1173,10 @@ characters={
 					OR = {
 						has_government = communism
 						any_other_country = {
-							has_country_leader = {  ruling_only = yes name = "Hideki Tojo" }
+							has_country_leader = { 
+								character = JAP_hideki_tojo
+								ruling_only = yes 
+							}
 						}
 						has_completed_focus = JAP_strengthen_civilian_government
 						has_completed_focus = JAP_the_unthinkable_option
@@ -1690,7 +1702,7 @@ characters={
 		name=JAP_minoru_takano
 		portraits={
 			army={
-				small="GFX_idea_asia_generic_1"
+				small="GFX_idea_generic_political_advisor_asia_1"
 			}
 		}
 		advisor={

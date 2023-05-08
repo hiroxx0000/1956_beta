@@ -3303,7 +3303,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Aksel Larsen"
+				character = DEN_Aksel_Larsen
 				ruling_only = yes
 			}
 		}
@@ -3313,7 +3313,7 @@ focus_tree = {
 		allow_branch = {
 			is_in_faction_with = USA
 			has_country_leader = {
-				name = "Aksel Larsen"
+				character = DEN_Aksel_Larsen
 				ruling_only = yes
 			}
 			has_dlc = "La Resistance"
@@ -3636,7 +3636,7 @@ focus_tree = {
 	}
 	focus = {
 		id = DEN_Align_the_Unions
-		icon = GFX_tblra_union_agreement
+		icon = GFX_BEL_union_agreement
 		cost = 5
 		ai_will_do = { factor = 1 }
 		prerequisite = {
@@ -5099,7 +5099,7 @@ focus_tree = {
 	}
 	focus = {
 		id = DEN_Steel_Investments
-		icon = GFX_goal_tblra_steel
+		icon = GFX_goal_BEL_steel
 		cost = 10
 		ai_will_do = { factor = 1 }
 		prerequisite = {
@@ -6263,7 +6263,7 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = DEN_Denmark_in_Peril
-	shared_focus = GEN_Industrial_Start
+	shared_focus = GEN_begin_industrial_buildup
 
 }
 focus_tree = {
@@ -6581,7 +6581,7 @@ shared_focus = {
 		modifier = {
 			add = 10
 			has_country_leader = {
-				name = "Christmas Møller"
+				character = DEN_John_Christmas_Moller
 				ruling_only = yes
 			}
 		}

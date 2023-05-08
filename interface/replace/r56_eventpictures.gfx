@@ -32,6 +32,10 @@ spriteTypes = {
 	#ethnic partisans
 
 	spriteType = {
+		name = "GFX_news_event_african_desert_partisans"
+		texturefile = "gfx/event_pictures/generic/news_event_african_desert_partisans.dds"
+	}	
+	spriteType = {
 		name = "GFX_news_event_arab_partisans"
 		texturefile = "gfx/event_pictures/generic/news_event_arab_partisans.dds"
 	}
@@ -1751,6 +1755,15 @@ spriteTypes = {
 		name = "GFX_report_GRE_metaxas"
 		texturefile = "gfx/event_pictures/GRE/report_event_GRE_metaxas.dds"
 	}
+###------> GUA <><> <><> <><> <><> <><>
+	spriteType = {
+		name = "GFX_news_event_guatemalan_cadet_parade"
+		texturefile = "gfx/event_pictures/GUA/news_event_guatemalan_cadet_parade.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_guatemalan_army"
+		texturefile = "gfx/event_pictures/GUA/news_event_guatemalan_army.dds"
+	}	
 
 ###------> HOL <><> <><> <><> <><> <><>
 
@@ -1780,6 +1793,8 @@ spriteTypes = {
 		name = "GFX_news_event_HOL_partisans"
 		texturefile = "gfx/event_pictures/HOL/news_event_HOL_partisans.dds"
 	}
+	
+
 ###------> HUN <><> <><> <><> <><> <><>
 
 	spriteType = {
@@ -2087,7 +2102,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_MAN_martyr_shrine"
 		texturefile = "gfx/event_pictures/MAN/news_event_MAN_martyr_shrine.dds"
+
 	}
+	spriteType = {
+		name = "GFX_news_event_MAN_diplomats_axis"
+		texturefile = "gfx/event_pictures/MAN/news_event_MAN_diplomats_axis.dds"
+	}		
 
 ###------> MEX <><> <><> <><> <><> <><>
 	spriteType = {
@@ -2298,6 +2318,10 @@ spriteTypes = {
 ###------> PER <><> <><> <><> <><> <><>
 
 	spriteType = {
+		name = "GFX_news_event_PER_mohammad_reza_takes_throne"
+		texturefile = "gfx/event_pictures/PER/news_event_PER_mohammad_reza_takes_throne.dds"
+	}
+	spriteType = {
 		name = "GFX_news_event_anglo_iranian_oil_company"
 		texturefile = "gfx/event_pictures/PER/news_event_anglo_iranian_oil_company.dds"
 	}
@@ -2306,8 +2330,16 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/PER/news_event_PER_anglo_soviet_invasion.dds"
 	}
 	spriteType = {
+		name = "GFX_news_event_PER_anglo_soviet_invasion_2"
+		texturefile = "gfx/event_pictures/PER/news_event_PER_anglo_soviet_invasion_2.dds"
+	}
+	spriteType = {
 		name = "GFX_report_event_PER_anglo_soviet_invasion"
 		texturefile = "gfx/event_pictures/PER/report_event_PER_anglo_soviet_invasion.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_anglo_soviet_invasion_2"
+		texturefile = "gfx/event_pictures/PER/report_event_PER_anglo_soviet_invasion_2.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_PER_anglo_soviet_meeting"
@@ -2316,6 +2348,42 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_PER_anglo_soviet_invasion_through_iraq"
 		texturefile = "gfx/event_pictures/PER/report_event_PER_anglo_soviet_invasion_through_iraq.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_kashf_hijab"
+		texturefile = "gfx/event_pictures/PER/report_event_kashf_hijab.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_foreign_ministry"
+		texturefile = "gfx/event_pictures/PER/report_event_PER_foreign_ministry.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_reza_shah_1"
+		texturefile = "gfx/event_pictures/PER/report_event_reza_shah_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_trans_iranian_railway_1"
+		texturefile = "gfx/event_pictures/PER/report_event_trans_iranian_railway_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_trans_iranian_railway_2"
+		texturefile = "gfx/event_pictures/PER/report_event_trans_iranian_railway_2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_trans_iranian_railway_3"
+		texturefile = "gfx/event_pictures/PER/report_event_trans_iranian_railway_3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_mohammad_reza_takes_throne"
+		texturefile = "gfx/event_pictures/PER/report_event_PER_mohammad_reza_takes_throne.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_reza_shah_abdicates_to_son"
+		texturefile = "gfx/event_pictures/PER/report_event_PER_reza_shah_abdicates_to_son.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_PER_shah_meets_roosevelt"
+		texturefile = "gfx/event_pictures/PER/report_event_PER_shah_meets_roosevelt.dds"
 	}
 
 ###------> PHI <><> <><> <><> <><> <><>
@@ -2350,7 +2418,12 @@ spriteTypes = {
 		name = "GFX_news_event_PRU_royal_palace_burning"
 		texturefile = "gfx/event_pictures/PRU/news_event_PRU_royal_palace_burning.dds"
 	}
-	#report event pictures
+	spriteType = {
+		name = "GFX_news_event_PRU_king_of_peru"
+		texturefile = "gfx/event_pictures/PRU/news_event_PRU_king_of_peru.dds"
+	}
+	#report event pictures	
+
 	spriteType = {
 		name = "GFX_report_event_PRU_benavides_funeral"
 		texturefile = "gfx/event_pictures/PRU/report_event_PRU_benavides_funeral.dds"
@@ -2387,6 +2460,19 @@ spriteTypes = {
 		name = "GFX_report_event_PRU_ureta_and_flores_candidates"
 		texturefile = "gfx/event_pictures/PRU/report_event_PRU_ureta_and_flores_candidates.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_PRU_apra_problem"
+		texturefile = "gfx/event_pictures/PRU/report_event_PRU_apra_revolution.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_report_event_PRU_quechua_people"
+		texturefile = "gfx/event_pictures/PRU/report_event_PRU_quechua_people.dds"
+	}	
+	spriteType = {
+		name = "GFX_report_event_PRU_rally"
+		texturefile = "gfx/event_pictures/PRU/report_event_PRU_political_rally.dds"
+	}			
 ###------> POL <><> <><> <><> <><> <><>
 
 	spriteType = {
@@ -2968,7 +3054,17 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/ROM/news_event_ROM_carol_poland.dds"
 	}
 
-###------> SAF <><> <><> <><> <><> <><>
+
+
+###------> RUT <><> <><> <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_news_event_RUT_capitulation_hungary"
+		texturefile = "gfx/event_pictures/RUT/news_event_RUT_capitulation_hungary.dds"
+	}	
+	
+###------> SAF <><> <><> <><> <><> <><>	
+
 	spriteType = {
 		name = "GFX_news_event_SAF_communist_reunion"
 		texturefile = "gfx/event_pictures/SAF/news_event_SAF_communist_reunion.dds"
@@ -3579,6 +3675,43 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_generation_of_28"
 		texturefile = "gfx/event_pictures/VEN/report_event_VEN_generation_of_28.dds"
+	}
+	
+###------> MPL <><> <><> <><> <><> <><>
+	spriteType = {
+		name = "GFX_report_event_MPL_aliyah"
+		texturefile = "gfx/event_pictures/MPL/report_event_MPL_aliyah.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_MPL_revolt"
+		texturefile = "gfx/event_pictures/MPL/report_event_MPL_revolt.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_MPL_independence"
+		textureFile = "gfx/event_pictures/MPL/news_event_MPL_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_MPL_emergency"
+		textureFile = "gfx/event_pictures/MPL/news_event_MPL_emergency.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_MPL_collapse"
+		textureFile = "gfx/event_pictures/MPL/news_event_MPL_collapse.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_MPL_israel"
+		textureFile = "gfx/event_pictures/MPL/news_event_MPL_israel.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_MPL_palestine"
+		textureFile = "gfx/event_pictures/MPL/news_event_MPL_palestine.dds"
+	}
+
+###------> PAL <><> <><> <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_report_event_pal_victory" 
+		texturefile = "gfx/event_pictures/PAL/report_event_pal_victory.dds"
 	}
 
 }

@@ -7,12 +7,40 @@ leader_traits = {
 		improve_relations_maintain_cost_factor = -0.25
 		trade_opinion_factor = 0.05
 	}
+
+	map_redrawer = {
+		random = no
+		sprite = 13
+		political_power_factor = -0.01
+		annex_cost_factor = -0.1
+		puppet_cost_factor = -0.1
+	}
+
+	
+
 	#for democratic for communist leaders in a united front
 	united_front_leader = {
 		sprite = 13
 		random = no
 
 		party_popularity_stability_factor = 0.5
+	}
+
+	#Traits used to identify panafricans in order to unlock a special shared branch allowing a multicountry pan african campaign spanning through the Caribbeans and Africa
+	panafrican_leanings = {
+		random = no
+		
+		political_power_factor = 0.03
+		party_popularity_stability_factor = 0.25
+		
+	}
+	#Trait for Henryk Józewski advisor for the Directorate of Ukraine/Polish Ukrainian condominium.
+	organizer_of_the_volhynia_experiment = {
+		political_power_factor = 0.15
+		stability_factor = 0.15
+		political_advisor_cost_factor = -0.25 #I don't work well with others
+		drift_defence_factor = 0.25
+		communism_drift = -0.01		
 	}
 
 	#Used on Mannerheim if he comes to power before Aug 1944
@@ -28,13 +56,64 @@ leader_traits = {
 		}
 	}
 
+	r56_reichskommissar = { #Used on Riechskommissariat to help them plus give them simple AI logic
+		random = no
+
+		required_garrison_factor = -0.1
+		resistance_garrison_penetration_chance = -0.1
+		resistance_damage_to_garrison = -0.1
+		industry_free_repair_factor = 0.1
+		autonomy_manpower_share = -0.25
+		
+
+		hidden_modifier = {
+			ai_join_ally_desire_factor = 100 #makes them want to join the war
+			enemy_operative_detection_chance_factor = 0.01 #so being here isn't risk free for spies
+			enemy_operative_forced_into_hiding_time_factor = 0.01 #so being here isn't risk free for spies
+			non_core_manpower = 0.01
+			surrender_limit = 0.01 #prevents werid insta cap sometimes
+			resistance_target_on_our_occupied_states = -0.01 #handicap
+		}
+
+		ai_strategy = { 
+			type = send_lend_lease_desire
+			id = "GER"
+			value = 800
+		}
+
+		ai_strategy = { #Worry about yourself
+			type = dont_defend_ally_borders
+			id = "GER"
+			value = 750
+		}
+
+		ai_strategy = { #Worry about yourself
+			type = send_volunteers_desire
+			id = "GER"
+			value = -750
+		}
+
+		ai_strategy = { #Worry about yourself
+			type = support
+			id = "GER"
+			value = -750
+		}
+
+		ai_strategy = { #dad help me
+			type = asking_foreign_garrison
+			id = "GER"
+			value = 750
+		}
+	}
+
 	#Used on Tito post Yalta for Tito ai logic
 	dislikes_russia = {
 		random = no
 		ai_strategy = {
 			type = antagonize
-			id = "SOV"
-			value = 175
+
+			id = "SOV"			
+			value = 25
 		}
 
 		ai_strategy = {
@@ -59,6 +138,7 @@ leader_traits = {
 		ai_get_ally_desire_factor = -75
 		ai_focus_peaceful_factor = 0.5
 	}
+
 	isolationist = {
 		random = no
 		ai_join_ally_desire_factor = -25
@@ -149,6 +229,18 @@ leader_traits = {
 
 	}
 
+	union_organizer = { #Juan Bautista Fuenmayor
+		random = no
+
+		economy_cost_factor = -0.5
+		industrial_concern_cost_factor = -0.1
+		local_resources_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	secretary_of_state = {
 		sprite = 13
 		random = no
@@ -156,6 +248,16 @@ leader_traits = {
 		enemy_justify_war_goal_time = 0.1
 	}
 
+	war_industry_miracle_worker = { #Speer's new trait
+		sprite = 10
+		random = no
+
+		conversion_cost_civ_to_mil_factor = -0.1
+		production_lack_of_resource_penalty_factor = -0.1
+		production_factory_max_efficiency_factor = 0.1
+		industry_air_damage_factor = -0.1
+		industrial_concern_cost_factor = -0.1
+	}
 	head_of_the_fbi = {
 		sprite = 13
 		random = no
@@ -619,6 +721,27 @@ leader_traits = {
 		neutrality_drift = 0.1
 	}
 
+###------> AFG <><> <><> <><> <><> <><>
+
+	AFG_mohammed_zahir_shah_of_afghanistan = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 0.1
+		ai_strategy = { # Sought to increase cooperation in the Middle East
+			type = befriend
+			id = "PER"			
+			value = 25
+		}
+		ai_strategy = {
+			type = befriend
+			id = "IRQ"			
+			value = 25
+		}
+		ai_strategy = { # We like these guys
+			type = befriend
+			id = "PAK"			
+			value = 50
+		}
+	}
 ###------> ALB <><> <><> <><> <><> <><>
 
 	likes_italy = {
@@ -1125,7 +1248,7 @@ leader_traits = {
 		communism_drift = -0.01
 		production_speed_buildings_factor = 0.03
 		consumer_goods_factor = -0.02
-		stability_factor = -0.10
+		stability_factor = -0.05 # Lowered from 10%
 	}
 
 	minister_of_railways = {
@@ -1307,9 +1430,14 @@ leader_traits = {
 	}
 
 ###------> EGY <><> <><> <><> <><> <><>
-	EGY_arrogant_autocrat = {
+	EGY_fuad_i_of_egypt = {
 		random = no
+		army_core_attack_factor = 0.05
 		drift_defence_factor = 0.1
+	}
+	EGY_farouk_i_of_egypt = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 0.05
 	}
 	EGY_regent = {
 		random = no
@@ -1353,12 +1481,17 @@ leader_traits = {
 		resistance_damage_to_garrison = -0.1
 		compliance_growth = 0.05
 	}
-	EGY_ottoman_loyalist = {
+	EGY_abbas_ii_of_egypt = {
+		random = no
+		political_power_factor = -0.05
+		drift_defence_factor = 0.1
+	}
+	EGY_abbas_ii_of_egypt_2 = {
 		random = no
 		war_support_factor = 0.1
 		drift_defence_factor = 0.1
 	}
-	EGY_the_new_sultan = {
+	EGY_abbas_ii_of_egypt_3 = {
 		random = no
 		war_support_factor = 0.1
 		justify_war_goal_time = -0.25
@@ -1932,7 +2065,38 @@ leader_traits = {
 
 	warlords = {
 		random = no
-		ai_get_ally_desire_factor = -10000
+		ai_get_ally_desire_factor = -999
+
+		
+		ai_strategy = {
+			type = alliance
+			id = "CHI"
+			value = 100
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "PRC"
+			value = 100
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "JAP"
+			value = -250
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "ENG"
+			value = -250
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "GER"
+			value = -250
+		}
 	}
 
 	JAP_toseiha_trait = {
@@ -2232,6 +2396,38 @@ leader_traits = {
 		war_support_factor = -0.05
 	}
 
+###------> IRQ <><> <><> <><> <><> <><>
+
+	IRQ_ghazi_i_of_iraq = {
+		random = no
+		mobilization_speed = 0.1
+		ai_strategy = { # Anti-imperialist
+			type = antagonize       
+			id = "ENG"
+			value = 10
+		}
+		ai_strategy = {
+			type = antagonize       
+			id = "FRA"
+			value = 10
+		}
+		ai_strategy = {
+			type = befriend      
+			id = "PER"
+			value = 25
+		}
+		ai_strategy = { # We're related
+			type = befriend      
+			id = "JOR"
+			value = 100
+		}
+		ai_strategy = {
+			type = protect     
+			id = "JOR"
+			value = 50
+		}
+	}
+
 ###------> ITA <><> <><> <><> <><> <><>
 
 	Duce = {
@@ -2243,29 +2439,40 @@ leader_traits = {
 		}
 	}
 
-	soldier_king = {
-		random = no
-		sprite = 13
-		stability_factor = 0.1
-		army_core_attack_factor = 0.1 #Player Civil War Advantage
-	}
-
 	soldier_king_2 = {
 		random = no
 		stability_factor = 0.1
-		army_core_attack_factor = 0.1
+		experience_gain_army_factor = 0.05
+		army_core_attack_factor = 0.1 #Player Civil War Advantage
 		drift_defence_factor = 0.25
 		foreign_subversive_activites = -0.1
+	}
+
+###------> LEB <><> <><> <><> <><> <><>
+
+	maronite_nationalist = {
+		random = no
+		party_popularity_stability_factor = -0.10
+		#conscription_factor = 0.1
+		conscription = 0.01
+		war_support_factor = 0.1
+	}	
+	moderniser = {
+		random = yes
+		sprite = 13
+		research_speed_factor = 0.025
 	}
 
 ###------> LIE <><> <><> <><> <><> <><>
 
 	LIE_franz_i_prince_of_liechtenstein = {
 		random = no
+		army_core_defence_factor = 0.05
 		drift_defence_factor = 0.1
 	}
 	LIE_franz_joseph_ii_prince_of_liechtenstein = {
 		random = no
+		improve_relations_maintain_cost_factor = 0.05
 		drift_defence_factor = 0.1
 	}
 
@@ -2589,7 +2796,7 @@ leader_traits = {
 		training_time_army_factor = -0.1
 		political_power_cost = 0.15
 		autonomy_gain = -0.1
-		army_experience = 0.3
+		experience_gain_army = 0.3
 	}
 
 	air_chief_ground_support_2_mck_tfv = {
@@ -2705,6 +2912,15 @@ leader_traits = {
 		}
 	}
 
+
+###------> MNC <><> <><> <><> <><> <><>
+	MNC_louis_ii_of_monaco = {
+		random = no
+		improve_relations_maintain_cost_factor = -0.1
+		democratic_acceptance = 10
+	}
+
+	
 
 ###------> NOR <><> <><> <><> <><> <><>
 	#For the Norway at War mod
@@ -2836,13 +3052,52 @@ leader_traits = {
 	## Glorious unique traits! Partisan Leader trait by Perhj, edits to this and additional traits by Khanor. ##
 	############################################################################################################
 
+###------> OMA <><> <><> <><> <><> <><>
+
+	OMA_said_bin_taimur_of_oman = {
+		random = no
+		political_advisor_cost_factor = -0.05
+		resistance_damage_to_garrison = -0.05
+		ai_strategy = { # Somewhat collaborationist
+			type = befriend
+			id = "ENG"			
+			value = 10
+		}
+	}
 
 ###------> PER <><> <><> <><> <><> <><>
-	superficial_modernizer = {
+	PER_shah_of_iran_trait = {
 		random = no
 
-		political_power_factor = 0.05
-		stability_factor = -0.05
+		opinion_gain_monthly_same_ideology_factor = 0.1
+		neutrality_acceptance = 20
+	}
+	
+	PER_reza_shah_modernizer_new = {
+		
+		random = no
+		
+		political_power_factor = -0.05
+		research_speed_factor = 0.01
+		production_speed_buildings_factor = 0.01
+		
+	}
+	
+	PER_reza_shah_cavalry_officer = {
+		
+		random = no
+		
+		cavalry_attack_factor = 0.1
+		cavalry_defence_factor = 0.1
+		custom_modifier_tooltip = PER_reza_shah_cav_officer_tt
+		hidden_modifier = {
+			high_command_cost_factor = -0.15
+			air_chief_cost_factor = -0.15
+			army_chief_cost_factor = -0.15
+			navy_chief_cost_factor = -0.15
+			theorist_cost_factor = -0.15
+		}
+		
 	}
 
 ###------> POL <><> <><> <><> <><> <><>
@@ -3569,7 +3824,7 @@ leader_traits = {
 		sprite = 14
 		max_planning = 0.10
 		resistance_damage_to_garrison = -0.1
-		experience_gain_army = 0.09
+		experience_gain_army = 0.30
 		cat_superior_firepower_cost_factor = -0.05
 
 		command_cap = 20
@@ -3918,6 +4173,22 @@ leader_traits = {
 	}
 
 ###------> SAU <><> <><> <><> <><> <><>
+	SAU_abdulaziz_al_saud_of_saudi_arabia = {
+		random = no
+		army_core_defence_factor = 0.1
+		surrender_limit = 0.1
+		ai_strategy = { # Theocracies and Shah's don't get along very well
+			type = antagonize
+			id = "PER"			
+			value = 25
+		}
+		ai_strategy = { # We're chill, I guess
+			type = protect
+			id = "OMA"			
+			value = 10
+		}
+	}
+
 	minister_of_everything = {
 		random = no
 		trade_laws_cost_factor = -0.25
@@ -4068,6 +4339,28 @@ leader_traits = {
 		communism_acceptance = -25
 	}
 
+	SWE_divided_council = {
+		random = no
+		stability_factor = -0.1
+		political_power_factor = -0.25
+		max_command_power = -25
+		political_advisor_cost_factor = 0.25
+	}
+
+	SWE_petrus_man_of_culture = {
+		random = no
+		improve_relations_maintain_cost_factor = 1
+		ai_strategy = {
+			type = befriend
+			id = "JAP"
+			value = 100
+		}		
+	}
+	SWE_can_run_really_fast = {
+		random = no
+		army_speed_factor = 0.05
+	}
+
 ###------> SWI <><> <><> <><> <><> <><>
 
 	#AI Attitudes
@@ -4195,6 +4488,65 @@ leader_traits = {
 		sprite = 13
 		mobilization_speed = 0.1
 		political_power_gain = 0.1
+	}
+
+###------> MPL <><> <><> <><> <><> <><>
+
+	MPL_high_commissioner = {
+		random = no 
+		resistance_damage_to_garrison = -0.25
+		resistance_target  = -0.25
+	}
+
+	MPL_divided_government_trait = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.05
+	}
+
+	MPL_zionist_sympathizer = {
+		random = no
+		political_power_factor = -0.05
+		monthly_population = 0.25
+	}
+
+	MPL_anti_zionist = {
+		random = no
+		political_power_factor = 0.05
+		monthly_population = -0.2
+	}
+
+	MPL_zionist_leader = {
+		random = no
+		political_power_factor = 0.05
+		conscription_factor = 0.1
+		sprite = 13
+	} 
+
+	MPL_experienced_banker = {
+		random = no
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.05
+		sprite = 10
+	}
+
+	MPL_scientific_genius = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.1
+	}
+	
+	MPL_levantine_unifier = {
+		random = no
+		sprite = 13
+		custom_modifier_tooltip = MPL_levantine_unifier_tt
+		
+	}
+	MPL_levantine_unifier_2 = {
+		random = no
+		sprite = 13
+		conscription = 0.005
+		
 	}
 
 ###------> XXX <><> <><> <><> <><> <><>
@@ -4565,6 +4917,84 @@ leader_traits = {
 		cavalry_defence_factor = 0.03
 		recon_factor = 0.05
 		unit_cavalry_design_cost_factor = -0.25
+	}
+	
+###------> PAL <><> <><> <><> <><> <><>	
+
+	PAL_custodian_of_qibla = { 
+		random = no
+		army_core_defence_factor = 0.05
+		surrender_limit = 0.15
+		ai_strategy = { # Theocracies and Shah's don't get along very well
+			type = antagonize
+			id = "PER"			
+			value = 25
+		}
+		ai_strategy = { 
+			type = befriend # Qibla holders, best of friends!
+			id = "SAU"			
+			value = 25
+		}
+	}
+
+	PAL_figurehead_for_islamism = { 
+		random = no
+		resistance_damage_to_garrison = -0.15
+		stability_factor = 0.1
+		war_stability_factor = 0.1
+		army_core_defence_factor = 0.1
+	}
+
+	PAL_supreme_commander_of_arab_revolution= { 
+		random = no
+		army_core_defence_factor = 0.1
+		surrender_limit = 0.05
+		ai_strategy = {
+			type = antagonize
+			id = "ENG"			
+			value = 25
+		}
+		ai_strategy = {
+			type = befriend
+			id = "IRQ"			
+			value = 25
+		}
+		ai_strategy = { 
+			type = befriend
+			id = "SAU"			
+			value = 25
+		}
+	}
+
+	PAL_hakim_al_thawra = { 
+		random = no
+		communism_drift = 0.05
+		army_core_defence_factor = 0.1
+		ai_strategy = {
+			type = befriend
+			id = "SOV"			
+			value = 25
+		}
+	}
+	#MPL
+	MPL_divided_government_trait = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.05
+	}
+	MPL_zionist_leader = {
+		random = no
+		political_power_factor = 0.05
+		conscription_factor = 0.1
+	} 
+	MPL_experienced_banker = {
+		random = no
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.05
+	}
+	MPL_scientific_genius = {
+		random = no
+		research_speed_factor = 0.1
 	}
 }
 
