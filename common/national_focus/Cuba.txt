@@ -9,11 +9,13 @@ focus_tree = {
 	}
 	default = no
 
-#shared_focus = ABC_establish_a_general_staff	
-#shared_focus = GEN_Aviation_Effort
-#shared_focus = GEN_Naval_Effort
-#shared_focus = GEN_begin_industrial_buildup
-#shared_focus = GEN_industrial_boom
+#as there are some military and industrial focuses in the political branch, some other branches will probably need to be deactivated after completion
+
+shared_focus = ABC_establish_a_general_staff	
+shared_focus = GEN_Aviation_Effort
+shared_focus = GEN_Naval_Effort
+shared_focus = GEN_begin_industrial_buildup
+shared_focus = GEN_industrial_boom
 
 shared_focus = CARIB_caribbean_unification
 
@@ -25,7 +27,7 @@ continuous_focus_position = { x = 5950 y = 2800 }
 		id = CUB_results_of_the_presidential_election
 		icon = GFX_goal_cuba_presidential_election
 		cost = 1.3
-		x = 48
+		x = 60
 		y = 0
 
 		ai_will_do = {

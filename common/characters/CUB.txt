@@ -207,7 +207,7 @@ characters={
 
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_3"
+				small="GFX_idea_generic_fascist_demagogue_southamerican_2d"
 			}
 		}
 	}
@@ -328,7 +328,7 @@ characters={
 		name="Fabio Grobart"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small="GFX_idea_generic_communist_revolutionary_southamerican_2d"
 			}
 		}
 		advisor={
@@ -371,7 +371,7 @@ characters={
 		name = "Raúl López del Castillo"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small="GFX_idea_generic_democratic_reformer_southamerican_2d"
 			}
 		}
 		advisor={
@@ -390,7 +390,7 @@ characters={
 		name = "Félix Lancís Sánchez"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small="GFX_idea_generic_political_advisor_south_america_3"
 			}
 		}
 		advisor={
@@ -409,7 +409,7 @@ characters={
 		name = "Carlos Hevia"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small="GFX_idea_generic_political_advisor_south_america_2"
 			}
 		}
 		advisor={
@@ -428,7 +428,7 @@ characters={
 		name = "Manuel Antonio de Varona"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small="GFX_idea_generic_head_of_intelligence_southamerican_2d"
 			}
 		}
 		advisor={
@@ -438,6 +438,10 @@ characters={
 			allowed = {
 				original_tag  = CUB
 			}
+			available = {
+				has_intelligence_agency = yes
+			}
+
 			traits  = {	head_of_intelligence }
 			cost = 150
 		}
@@ -447,7 +451,7 @@ characters={
 		name = "Meyer Lansky"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_4"
+				small="GFX_idea_generic_head_of_intelligence_western_european_2d"
 			}
 		}
 		advisor={
@@ -476,8 +480,8 @@ characters={
 		name = "Mario Ramirez Delgado"
 		portraits={ #Could use a real portrait.
 			army={
-				small="GFX_idea_generic_navy_south_america_3"
-				large="gfx/leaders/r56_generic/r56_portrait_generic_admiral_south_america_1.dds"
+				small="GFX_idea_generic_navy_south_america_2"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_2.dds"
 			}
 		}
 		advisor={
@@ -510,8 +514,8 @@ characters={
 		name = "Rodríguez Calderón"
 		portraits={ #Could use a real portrait.
 			army={
-				small="GFX_idea_generic_navy_south_america_5"
-				large="gfx/leaders/r56_generic/r56_portrait_generic_admiral_south_america_1.dds"
+				small="GFX_idea_generic_navy_south_america_4"
+				large="gfx/leaders/r56_generic/r56_portrait_GRE_generic_navy_1.dds"
 			}
 		}
 		advisor={
@@ -522,7 +526,8 @@ characters={
 					original_tag = CUB
 				}
 				traits = {
-					navy_screen_3
+					navy_chief_decisive_battle_2
+					#navy_screen_3
 				}
 				cost = 150
 				ai_will_do = {
@@ -556,7 +561,7 @@ characters={
 					original_tag = CUB
 				}
 				traits = {
-					navy_fleet_logistics_2
+					navy_chief_maneuver_2
 				}
 				cost = 100
 				ai_will_do = {
@@ -620,8 +625,8 @@ characters={
 		name="Francisco Tabernilla"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_2"
-				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+				small="GFX_portrait_r56_portrait_PRU_generic_land_2_small"
+				large="GFX_portrait_r56_portrait_PRU_generic_land_2"
 			}
 		}
 		advisor={
@@ -654,8 +659,8 @@ characters={
 		name = "Pedro Rodríguez Ávila"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_2"
-				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+				small="GFX_portrait_r56_portrait_PRU_generic_land_3_small"
+				large="GFX_portrait_r56_portrait_PRU_generic_land_3"
 			}
 		}
 		advisor={
@@ -688,8 +693,8 @@ characters={
 		name = "Rafael Montalvo Morales"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_1"
-				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+				small="GFX_Portrait_r56_portrait_generic_land_south_america_camilo_alonso_vega_small"
+				large="GFX_Portrait_r56_portrait_generic_land_south_america_camilo_alonso_vega"
 			}
 		}
 		advisor={
@@ -722,8 +727,8 @@ characters={
 		name = "Alberto Herrera Franchi"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_1"
-				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+				small="GFX_portrait_r56_portrait_PRU_generic_land_4_small"
+				large="GFX_portrait_r56_portrait_PRU_generic_land_4"
 			}
 		}
 		advisor={
@@ -756,8 +761,8 @@ characters={
 		name = "Cosme Peraza"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_1"
-				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+				small="GFX_portrait_r56_portrait_PRU_generic_land_5_small"
+				large="GFX_portrait_r56_portrait_PRU_generic_land_5"
 			}
 		}
 		advisor={
@@ -790,8 +795,8 @@ characters={
 		name = "Daniel Gispert García"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_south_america_3"
-				large="gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+				small="GFX_idea_generic_army_south_america_2"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
 			}
 		}
 		advisor={
@@ -815,7 +820,7 @@ characters={
 			}
 		}
 		corps_commander = {
-			traits = { career_officer old_guard }
+			traits = { career_officer old_guard caring_leader }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 2
@@ -841,7 +846,8 @@ characters={
 					original_tag = CUB
 				}
 				traits = {
-					efficient_flight_coordinator
+					#efficient_flight_coordinator
+					air_chief_safety_2
 				}
 				cost = 125
 				ai_will_do = {
@@ -856,7 +862,7 @@ characters={
 		name = "Julio Aguado"
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_south_america_1"
+				small="GFX_idea_generic_army_art_western_european_2d"
 			}
 		}
 		advisor={
