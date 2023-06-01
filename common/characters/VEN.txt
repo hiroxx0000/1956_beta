@@ -543,9 +543,7 @@ characters={
 				prince_of_terror
 			}
 			available = {
-				OR = {
-					has_completed_focus = VEN_DSN
-				}
+				has_completed_focus = VEN_DSN
 			}
 		}
 	}

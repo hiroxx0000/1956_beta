@@ -350,15 +350,15 @@ focus_tree = {
         }
         completion_reward = {
             swap_ideas = {
-		remove_idea = VEN_corruption_2
-		add_idea = VEN_corruption_5
+                remove_idea = VEN_corruption_2
+                add_idea = VEN_corruption_5
             }
         }
     }
     focus = {
         id = VEN_health_and_social_assistance
         icon = GFX_goal_medicine
-        x = -3
+        x = -2
         y = 1
         relative_position_id = VEN_eleazar_contreras
         cost = 7.2
@@ -3339,20 +3339,11 @@ focus = {
             focus = VEN_crush_communists
         }
         completion_reward = {
-            add_stability = -0.1
             add_political_power = 100
-	    add_popularity = {
-			ideology = fascism
-			popularity = 0.15
-	    }
-	    add_popularity = {
-			ideology = democratic
-			popularity = -0.05
-	    }
-	    add_popularity = {
-			ideology = neutrality
-			popularity = -0.10
-	    }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
         }
     }
     focus = {
@@ -5855,7 +5846,7 @@ focus = {
         cost = 10
 
         available = {
-            has_completed_focus = VEN_reform_GNB
+            has_completed_focus = VEN_form_GN
             OR = {
                 has_war = yes
                 threat > 0.8
@@ -6667,8 +6658,9 @@ focus = {
     focus = {
         id = VEN_stealth_upgrades
         icon = GFX_goal_navy_schematics
-        x = -24
-        y = 4
+        relative_position_id = VEN_mass_submarines
+        x = 0
+        y = 1
         cost = 5
         available_if_capitulated = yes
         search_filters = {FOCUS_FILTER_RESEARCH}
