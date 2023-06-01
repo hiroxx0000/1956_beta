@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
 
  #nation names
 
@@ -545,6 +545,9 @@ l_english:
 
  VEN_form_GN:0 "Foundation of the Guardia Nacional"
  VEN_form_GN_desc:0 "Our armed forces require a few specialized unit tasked with gendarmerie and civil protection duties. Gathered funds allow us to form Guardia Nacional de Venezuela, which additionally can serve as a reserve light infantry force. "
+
+ VEN_raise_the_GNB:0 "Raise the GNB"
+ VEN_raise_the_GNB_desc:0 ""
 
  VEN_raise_the_GN:0 "Raise GN Divisions"
  VEN_raise_the_GN_desc:0 "With tensions at ans obsolete breaking point and now threatening our own homeland, it is now time we call in the GN's national defence force to protect us from foreign threats."
